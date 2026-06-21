@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage-compat.js"></script>
 
 <style>
 :root {
@@ -3201,7 +3201,7 @@ const REACTIONS = ['👍','❤️','😂','😮','😢','😡'];
 
 // ===== ADMIN CONFIG (অ্যাডমিন এখানে Firebase ও ImgBB সেটআপ করবেন) =====
 // ⚠️ নিচের তথ্যগুলো আপনার Firebase Console থেকে নিন এবং এখানে বসান
-const FIREBASE_CONFIG = {
+const firebaseConfig = {
   apiKey: "AIzaSyCWmLnw7P63QfHkfLFdUh21BDjV3emXcWQ",
   authDomain: "facebook-3e7b1.firebaseapp.com",
   projectId: "facebook-3e7b1",
@@ -3217,14 +3217,14 @@ function saveConfig() { /* admin only - not used */ }
 
 function loadConfig() {
   APP_CONFIG = {
-    apiKey: FIREBASE_CONFIG.apiKey,
-    authDomain: FIREBASE_CONFIG.authDomain,
-    databaseURL: FIREBASE_CONFIG.databaseURL,
-    projectId: FIREBASE_CONFIG.projectId,
-    storageBucket: FIREBASE_CONFIG.storageBucket,
-    messagingSenderId: FIREBASE_CONFIG.messagingSenderId,
-    appId: FIREBASE_CONFIG.appId,
-    measurementId: FIREBASE_CONFIG.measurementId,
+    apiKey: firebaseConfig.apiKey,
+    authDomain: firebaseConfig.authDomain,
+    databaseURL: firebaseConfig.databaseURL,
+    projectId: firebaseConfig.projectId,
+    storageBucket: firebaseConfig.storageBucket,
+    messagingSenderId: firebaseConfig.messagingSenderId,
+    appId: firebaseConfig.appId,
+    measurementId: firebaseConfig.measurementId,
     imgbbKey: IMGBB_API_KEY
   };
   initFirebase();
