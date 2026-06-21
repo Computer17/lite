@@ -34,13 +34,11 @@
   --glass-border: rgba(255,255,255,0.6);
   --navbar-h: 56px;
   --bottombar-h: 56px;
-  /* Premium glass surfaces */
   --glass-btn-bg: linear-gradient(135deg, rgba(255,255,255,0.55), rgba(255,255,255,0.18));
   --glass-btn-border: rgba(255,255,255,0.55);
   --glass-btn-shine: rgba(255,255,255,0.65);
   --glass-icon-bg: rgba(255,255,255,0.5);
   --glass-icon-border: rgba(255,255,255,0.65);
-  /* Premium per-icon accent gradients */
   --grad-home: linear-gradient(135deg, #1877f2, #38bdf8);
   --grad-friends: linear-gradient(135deg, #a855f7, #ec4899);
   --grad-notif: linear-gradient(135deg, #f59e0b, #f43f5e);
@@ -300,7 +298,6 @@ img { max-width: 100%; }
   display: flex;
   align-items: center;
 }
-/* Collapsed: just the icon button */
 .nav-search-icon-btn {
   width: 38px; height: 38px;
   background: var(--glass-icon-bg);
@@ -314,7 +311,6 @@ img { max-width: 100%; }
   flex-shrink: 0;
 }
 .nav-search-icon-btn:hover { transform: translateY(-2px) scale(1.06); }
-/* Full search overlay when expanded */
 #search-overlay {
   display: none;
   position: fixed;
@@ -392,7 +388,6 @@ img { max-width: 100%; }
   box-shadow: 0 6px 16px rgba(24,119,242,0.22), inset 0 1px 0 rgba(255,255,255,0.5);
 }
 .nav-btn:active, .nav-search-icon-btn:active { transform: translateY(0) scale(0.92); }
-/* Premium gradient icon coloring on hover/focus */
 #nav-btn-search:hover i::before, #nav-btn-search:focus i::before { background: var(--grad-search); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 #nav-btn-messages:hover i::before, #nav-btn-messages:focus i::before { background: var(--grad-messages); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 #nav-btn-friends:hover i::before, #nav-btn-friends:focus i::before { background: var(--grad-friends); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
@@ -461,7 +456,6 @@ img { max-width: 100%; }
 }
 .bottom-btn svg { width: 24px; height: 24px; transition: all 0.25s; }
 
-/* Per-icon premium glass + colored glow */
 #btn-home.active .nav-icon-wrap { background: linear-gradient(135deg, rgba(24,119,242,0.18), rgba(56,189,248,0.12)); backdrop-filter: blur(10px); border-color: rgba(24,119,242,0.25); box-shadow: 0 4px 14px rgba(24,119,242,0.3), inset 0 1px 0 rgba(255,255,255,0.4); }
 #btn-home.active svg { stroke: url(#grad-home); }
 #btn-friends.active .nav-icon-wrap { background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(236,72,153,0.12)); backdrop-filter: blur(10px); border-color: rgba(168,85,247,0.25); box-shadow: 0 4px 14px rgba(168,85,247,0.3), inset 0 1px 0 rgba(255,255,255,0.4); color: #a855f7; }
@@ -471,7 +465,6 @@ img { max-width: 100%; }
 #btn-profile.active .nav-icon-wrap { background: linear-gradient(135deg, rgba(16,185,129,0.18), rgba(20,184,166,0.12)); backdrop-filter: blur(10px); border-color: rgba(16,185,129,0.25); box-shadow: 0 4px 14px rgba(16,185,129,0.3), inset 0 1px 0 rgba(255,255,255,0.4); color: #10b981; }
 #btn-profile.active svg { stroke: url(#grad-profile); }
 
-/* Center create button */
 .bottom-btn.create-btn .nav-icon-wrap {
   width: 46px; height: 46px;
   background: linear-gradient(135deg, #1877f2 0%, #6366f1 100%);
@@ -509,7 +502,6 @@ img { max-width: 100%; }
 }
 .stories-container::-webkit-scrollbar { display: none; }
 
-/* Each story item wrapper */
 .story-card {
   flex-shrink: 0;
   display: flex; flex-direction: column; align-items: center;
@@ -522,9 +514,6 @@ img { max-width: 100%; }
   position: relative;
 }
 
-/* Instagram gradient ring */
-/* ===== INSTAGRAM STORY RING ===== */
-/* Outer gradient border ring */
 .story-ring {
   width: 70px; height: 70px;
   border-radius: 50%;
@@ -539,18 +528,15 @@ img { max-width: 100%; }
 .story-card:active .story-ring { transform: scale(0.90); }
 .story-card:hover .story-ring { transform: scale(1.04); box-shadow: 0 5px 18px rgba(221,42,123,0.55); }
 
-/* Seen state: grey ring */
 .story-ring.seen {
   background: var(--border);
   box-shadow: none;
 }
-/* Own story ring: blue */
 .story-ring.own {
   background: linear-gradient(135deg, #1877f2, #42b0f5);
   box-shadow: 0 3px 12px rgba(24,119,242,0.45);
 }
 
-/* White gap between gradient border and image */
 .story-ring-inner {
   width: 100%; height: 100%;
   border-radius: 50%;
@@ -562,7 +548,6 @@ img { max-width: 100%; }
   box-sizing: border-box;
 }
 
-/* Default avatar (when no story image) */
 .story-ring-inner img {
   width: 100%; height: 100%;
   border-radius: 50%;
@@ -572,7 +557,6 @@ img { max-width: 100%; }
   inset: 0;
 }
 
-/* Story thumbnail fills the circle */
 .story-ring-inner .story-preview-img {
   position: absolute;
   inset: 0;
@@ -583,7 +567,6 @@ img { max-width: 100%; }
   display: block;
 }
 
-/* Small avatar badge - bottom left corner */
 .story-ring-inner .story-avatar-overlay {
   position: absolute;
   bottom: 0px; left: 0px;
@@ -596,7 +579,6 @@ img { max-width: 100%; }
   flex-shrink: 0;
 }
 
-/* Story name below */
 .story-name {
   font-size: 11px; font-weight: 600;
   color: var(--text);
@@ -608,15 +590,6 @@ img { max-width: 100%; }
   bottom: unset !important; left: unset !important; right: unset !important;
 }
 
-/* Add story button */
-.story-add { display: none; }
-.story-add-icon { display: none; }
-.story-item { position: static; }
-.story-item img { display: none; }
-.story-item::before { display: none; }
-.story-avatar { display: none; }
-
-/* Add Story card special */
 .story-add-fb {
   background: transparent !important;
   border: none !important;
@@ -776,7 +749,6 @@ img { max-width: 100%; }
 .comment-action.liked { color: var(--primary); }
 .comment-time { font-size: 11px; color: var(--text-secondary); }
 
-/* Comment emoji picker */
 .comment-emoji-picker {
   background: var(--card);
   border-radius: 16px;
@@ -793,7 +765,6 @@ img { max-width: 100%; }
 .comment-emoji-item { font-size: 22px; cursor: pointer; padding: 3px; border-radius: 6px; transition: transform 0.15s; line-height: 1; }
 .comment-emoji-item:hover { transform: scale(1.3); background: var(--hover); }
 
-/* Reply thread */
 .comment-replies {
   margin-left: 42px;
   margin-top: 6px;
@@ -813,7 +784,6 @@ img { max-width: 100%; }
 .reply-bubble .name { font-size: 12px; font-weight: 700; color: var(--text); cursor: pointer; }
 .reply-bubble .text { font-size: 13px; color: var(--text); margin-top: 1px; }
 
-/* Comment react popup */
 .comment-react-picker {
   position: absolute;
   bottom: calc(100% + 6px);
@@ -885,7 +855,6 @@ img { max-width: 100%; }
 .modal-close:active { transform: scale(0.92); }
 .modal-body { padding: 16px; }
 
-/* Upload area */
 .upload-preview {
   width: 100%; background: var(--hover);
   border-radius: 14px; overflow: hidden;
@@ -1046,7 +1015,6 @@ img { max-width: 100%; }
   position: sticky; top: var(--navbar-h); z-index: 10;
 }
 .section-title { font-size: 18px; font-weight: 800; padding: 14px 16px 6px; }
-/* Facebook-style vertical friend list */
 .friend-grid { display: flex; flex-direction: column; gap: 0; padding: 0; }
 .friend-card {
   background: var(--card);
@@ -1073,7 +1041,6 @@ img { max-width: 100%; }
 .btn-add-friend.sent { background: var(--hover); color: var(--text-secondary); }
 .btn-add-friend.friends { background: var(--hover); color: var(--text); }
 
-/* REQUESTS */
 .friend-request-item {
   display: flex; align-items: center; gap: 12px;
   padding: 12px 16px;
@@ -1147,7 +1114,6 @@ img { max-width: 100%; }
 .settings-desc { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
 .settings-arrow { color: var(--text-secondary); }
 
-/* Theme toggle */
 .theme-toggle {
   width: 48px; height: 26px; border-radius: 13px;
   background: var(--border);
@@ -1164,7 +1130,6 @@ img { max-width: 100%; }
 }
 .theme-toggle.on::after { transform: translateX(22px); }
 
-/* User profile card (in settings top) */
 .user-profile-card {
   background: var(--card);
   margin: 10px;
@@ -1232,7 +1197,6 @@ img { max-width: 100%; }
 }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* LOADING SPINNER */
 .spinner {
   width: 24px; height: 24px; border-radius: 50%;
   border: 3px solid rgba(24,119,242,0.2);
@@ -1242,7 +1206,6 @@ img { max-width: 100%; }
 }
 @keyframes spin { to{transform:rotate(360deg)} }
 
-/* EMPTY STATE */
 .empty-state {
   text-align: center; padding: 48px 24px;
   color: var(--text-secondary);
@@ -1251,7 +1214,6 @@ img { max-width: 100%; }
 .empty-state h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text); }
 .empty-state p { font-size: 14px; line-height: 1.5; }
 
-/* REACTION PICKER */
 .reaction-picker {
   position: absolute; bottom: calc(100% + 8px); left: 0;
   background: var(--card);
@@ -1267,7 +1229,6 @@ img { max-width: 100%; }
 .reaction-btn { font-size: 28px; cursor: pointer; transition: transform 0.2s; }
 .reaction-btn:hover { transform: scale(1.3) translateY(-4px); }
 
-/* POST MORE MENU — Global single dropdown */
 #global-post-menu {
   position: fixed;
   background: var(--card);
@@ -1293,7 +1254,6 @@ img { max-width: 100%; }
 .post-menu-item.danger { color: var(--danger); }
 .post-menu-item i { width: 22px; text-align: center; font-size: 16px; }
 
-/* ===== REPORT MODAL ===== */
 #report-modal-overlay {
   display: none;
   position: fixed; inset: 0; z-index: 500;
@@ -1395,11 +1355,9 @@ img { max-width: 100%; }
 }
 .report-cancel-btn:hover { background: var(--border); }
 
-/* CONFIG MODAL - hidden, admin only */
 #config-modal { display: none !important; }
 .config-note { font-size: 12px; color: #888; margin-top: -8px; margin-bottom: 14px; line-height: 1.5; }
 
-/* VERIFIED BADGE - Green Verified */
 .verified-badge {
   display: inline-flex; align-items: center; justify-content: center;
   width: 18px; height: 18px;
@@ -1429,7 +1387,6 @@ img { max-width: 100%; }
 .verified-badge.large { width: 22px; height: 22px; margin-left: 5px; }
 .verified-badge.large i { font-size: 12px; }
 
-/* Badge plan cards */
 .badge-plan-card {
   background: var(--card);
   border: 2px solid var(--border);
@@ -1450,7 +1407,6 @@ img { max-width: 100%; }
 .plan-price { font-size: 20px; font-weight: 900; color: var(--primary); }
 .badge-plan-card.popular .plan-price { color: #d97706; }
 
-/* Verified badge modal */
 #verified-modal .badge-feature {
   display: flex; align-items: center; gap: 12px;
   padding: 12px 0; border-bottom: 1px solid var(--border);
@@ -1491,7 +1447,6 @@ img { max-width: 100%; }
 .claimed-info strong { font-size: 15px; color: var(--text); }
 .claimed-info small { font-size: 13px; color: var(--text-secondary); display: block; margin-top: 4px; }
 
-/* SUSPENDED / BANNED screen */
 #suspended-screen {
   display: none; position: fixed; inset: 0; z-index: 999;
   background: #fff; flex-direction: column;
@@ -1504,7 +1459,6 @@ img { max-width: 100%; }
 #suspended-screen p { font-size: 16px; color: #666; max-width: 300px; }
 #suspended-screen button { margin-top: 24px; padding: 14px 32px; background: var(--danger); color: #fff; border-radius: 10px; font-size: 16px; font-weight: 700; }
 
-/* ONLINE STATUS DOT */
 .online-dot {
   position: absolute;
   bottom: 1px; right: 1px;
@@ -1519,10 +1473,8 @@ img { max-width: 100%; }
 .online-dot.sm { width: 10px; height: 10px; }
 .online-dot.lg { width: 14px; height: 14px; bottom: 2px; right: 2px; }
 
-/* SECTION DIVIDER */
 .feed-divider { height: 8px; background: var(--bg); }
 
-/* ===== MESSAGES ===== */
 #page-messages {
   background: var(--bg);
   min-height: 100vh;
@@ -1580,7 +1532,6 @@ img { max-width: 100%; }
 .msg-unread-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--primary); }
 .msg-convo-item.unread .msg-convo-time { color: var(--primary); font-weight: 700; }
 
-/* ===== CHAT PAGE — MESSENGER STYLE ===== */
 #page-chat {
   display: none;
   flex-direction: column;
@@ -1592,7 +1543,6 @@ img { max-width: 100%; }
   display: flex;
 }
 
-/* Chat header */
 #chat-header {
   position: sticky;
   top: var(--navbar-h);
@@ -1603,21 +1553,17 @@ img { max-width: 100%; }
   flex-shrink: 0;
 }
 
-/* Messages scroll area */
 #chat-messages {
   flex: 1;
   overflow-y: auto;
   padding: 16px 12px;
-  padding-bottom: 16px;
+  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
   scroll-behavior: smooth;
   background: var(--bg);
-  /* নিচে input bar এর উচ্চতা ছেড়ে দেওয়া */
-  padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
 }
 #chat-messages::-webkit-scrollbar { width: 4px; }
 #chat-messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
 
-/* Fixed bottom input bar */
 #chat-input-bar {
   position: fixed;
   bottom: var(--bottombar-h);
@@ -1675,7 +1621,6 @@ img { max-width: 100%; }
 .chat-send-btn:hover { transform: scale(1.07); box-shadow: 0 6px 18px rgba(24,119,242,0.5); }
 .chat-send-btn:active { transform: scale(0.94); }
 
-/* ===== CHAT EMOJI PICKER ===== */
 .chat-emoji-panel {
   position: fixed;
   bottom: calc(var(--bottombar-h) + 68px);
@@ -1702,7 +1647,6 @@ img { max-width: 100%; }
 }
 .chat-emoji-item:hover { transform: scale(1.3); background: var(--hover); }
 
-/* ===== CHAT BUBBLES — Messenger Style ===== */
 .msg-bubble-wrap {
   display: flex;
   gap: 8px;
@@ -1713,7 +1657,6 @@ img { max-width: 100%; }
 .msg-bubble-wrap.me { flex-direction: row-reverse; }
 .msg-bubble-wrap + .msg-bubble-wrap { margin-top: 2px; }
 
-/* avatar */
 .msg-bubble-av {
   width: 30px; height: 30px;
   border-radius: 50%;
@@ -1724,7 +1667,6 @@ img { max-width: 100%; }
 }
 .msg-bubble-wrap.me .msg-bubble-av { display: none; }
 
-/* bubble */
 .msg-bubble {
   max-width: 72%;
   padding: 10px 14px;
@@ -1734,7 +1676,6 @@ img { max-width: 100%; }
   overflow-wrap: break-word;
   position: relative;
 }
-/* received */
 .msg-bubble-wrap.them .msg-bubble {
   background: var(--card);
   color: var(--text);
@@ -1742,7 +1683,6 @@ img { max-width: 100%; }
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   border: 1px solid var(--border);
 }
-/* sent */
 .msg-bubble-wrap.me .msg-bubble {
   background: linear-gradient(135deg, #1877f2 0%, #0d5bd1 100%);
   color: #fff;
@@ -1750,7 +1690,6 @@ img { max-width: 100%; }
   box-shadow: 0 2px 8px rgba(24,119,242,0.3);
 }
 
-/* time stamp */
 .msg-time-label {
   font-size: 10px;
   color: var(--text-secondary);
@@ -1761,7 +1700,6 @@ img { max-width: 100%; }
 .msg-bubble-wrap.them .msg-time-label { text-align: left; }
 .msg-bubble-wrap.me .msg-time-label { color: rgba(255,255,255,0.75); }
 
-/* date divider */
 .msg-date-divider {
   text-align: center;
   font-size: 12px;
@@ -1778,7 +1716,6 @@ img { max-width: 100%; }
   background: var(--border);
 }
 
-/* Reaction popup animation */
 @keyframes reactionFloat {
   0% { transform: scale(0) translateY(0); opacity: 0; }
   40% { transform: scale(1.3) translateY(-10px); opacity: 1; }
@@ -1793,7 +1730,6 @@ img { max-width: 100%; }
   z-index: 999;
 }
 
-/* Story reply bubble (in messages) */
 .story-reply-bubble {
   background: rgba(24,119,242,0.15);
   border-left: 3px solid var(--primary);
@@ -1806,10 +1742,6 @@ img { max-width: 100%; }
 }
 .story-reply-bubble img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
 
-/* Floating create btn */
-/* Removed - using bottom nav */
-
-/* Misc */
 .text-center { text-align: center; }
 .fw700 { font-weight: 700; }
 .mt8 { margin-top: 8px; }
@@ -1818,20 +1750,16 @@ img { max-width: 100%; }
 .items-center { align-items: center; }
 .gap8 { gap: 8px; }
 
-/* === STORY ADD MODAL === */
 #story-modal .modal-body { padding-bottom: 0; }
 .story-type-btns { display: flex; gap: 8px; margin-bottom: 14px; }
 .story-type-btn { flex: 1; padding: 10px; border-radius: 10px; font-size: 14px; font-weight: 600; background: var(--hover); color: var(--text); text-align: center; cursor: pointer; }
 .story-type-btn.active { background: var(--primary-light); color: var(--primary); }
 
-/* Post image grid for multiple */
 .post-images-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
 .post-images-grid-2 img { width: 100%; height: 200px; object-fit: cover; }
 
-/* Message notif dot */
 .msg-dot { display: inline-block; width: 8px; height: 8px; background: var(--danger); border-radius: 50%; }
 
-/* FLOATING MESSAGE BUTTON */
 #msg-float-btn {
   position: fixed; bottom: calc(var(--bottombar-h) + 16px); right: 16px;
   width: 52px; height: 52px; border-radius: 50%;
@@ -1845,7 +1773,6 @@ img { max-width: 100%; }
 }
 #msg-float-btn:hover { transform: scale(1.08); }
 
-/* COMING SOON MODAL */
 #coming-soon-modal .modal-body {
   text-align: center; padding: 32px 20px;
 }
@@ -1853,7 +1780,6 @@ img { max-width: 100%; }
 .coming-soon-title { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
 .coming-soon-sub { font-size: 15px; color: var(--text-secondary); line-height: 1.5; }
 
-/* STORY REACTIONS */
 .story-reaction-bar {
   position: absolute; bottom: 70px; left: 0; right: 0;
   display: flex; align-items: center; justify-content: space-between;
@@ -1874,15 +1800,11 @@ img { max-width: 100%; }
   backdrop-filter: blur(4px);
 }
 
-/* story-add-fb styles moved to Stories section above */
-
-/* DASHBOARD */
 .dashboard-stat-card {
   border-radius: 14px; padding: 16px; text-align: center; color: #fff;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
-/* IMPROVED PROFILE */
 .profile-cover {
   background: linear-gradient(135deg, #1877f2, #42b0f5);
 }
@@ -1891,7 +1813,6 @@ img { max-width: 100%; }
   background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.3));
 }
 
-/* MSG REQUEST BADGE */
 .msg-req-badge {
   position: absolute; top: -2px; right: -2px;
   background: #e41e3f; color: #fff;
@@ -1901,17 +1822,14 @@ img { max-width: 100%; }
   display: flex; align-items: center; justify-content: center;
 }
 
-/* SCROLL TO TOP ANIMATION */
 html { scroll-behavior: smooth; }
 
-/* VERIFIED BADGE MODAL - green */
 .badge-preview-wrap {
   background: linear-gradient(135deg, #00a844, #1de982) !important;
 }
 .free-trial-tag { background: #1877f2 !important; }
 .btn-claim { background: linear-gradient(135deg,#00c853,#1de982) !important; box-shadow: 0 4px 16px rgba(0,200,83,0.4) !important; }
 
-/* PROFILE FRIEND STATS */
 .profile-friend-stats {
   display: flex; gap: 20px; padding: 12px 16px;
   border-top: 1px solid var(--border);
@@ -1921,8 +1839,6 @@ html { scroll-behavior: smooth; }
 .profile-stat-num { font-size: 18px; font-weight: 800; color: var(--text); }
 .profile-stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
 
-
-/* ===== MONETIZATION SYSTEM ===== */
 .monetize-hero {
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
   border-radius: 20px; margin: 0 0 18px; padding: 22px 20px;
@@ -2029,7 +1945,6 @@ html { scroll-behavior: smooth; }
   box-shadow: 0 2px 6px rgba(245,158,11,0.4);
 }
 
-/* ===== CREATOR BADGE (Black) ===== */
 .creator-badge {
   display: inline-flex; align-items: center; justify-content: center;
   width: 18px; height: 18px;
@@ -2056,7 +1971,6 @@ html { scroll-behavior: smooth; }
 .creator-badge.large { width: 22px; height: 22px; margin-left: 5px; }
 .creator-badge.large i { font-size: 11px; }
 
-/* ===== MONETIZATION OFFER BANNER ===== */
 .monetize-offer-banner {
   background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #1d4ed8 100%);
   border-radius: 20px; margin: 0 0 18px; padding: 20px;
@@ -2106,7 +2020,6 @@ html { scroll-behavior: smooth; }
 }
 .offer-claim-btn:active { transform: scale(0.98); }
 
-/* ===== WITHDRAW BUTTON ===== */
 .withdraw-btn {
   width: 100%; padding: 14px;
   background: var(--card); color: var(--text-secondary);
@@ -2120,7 +2033,6 @@ html { scroll-behavior: smooth; }
   border-radius: 20px; padding: 2px 8px; font-weight: 700; margin-left: 6px;
 }
 
-/* ===== HOME PAGE ANIMATIONS ===== */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -2142,7 +2054,6 @@ html { scroll-behavior: smooth; }
 .animate-fadeInScale { animation: fadeInScale 0.45s cubic-bezier(0.22,1,0.36,1) both; }
 .animate-slideInLeft { animation: slideInLeft 0.4s cubic-bezier(0.22,1,0.36,1) both; }
 
-/* Stagger delays for post cards */
 .post-card { animation: fadeInUp 0.45s cubic-bezier(0.22,1,0.36,1) both; }
 .post-card:nth-child(1) { animation-delay: 0.05s; }
 .post-card:nth-child(2) { animation-delay: 0.10s; }
@@ -2151,7 +2062,6 @@ html { scroll-behavior: smooth; }
 .post-card:nth-child(5) { animation-delay: 0.20s; }
 .post-card:nth-child(n+6) { animation-delay: 0.22s; }
 
-/* Story cards animate in */
 .story-card { animation: fadeInScale 0.4s cubic-bezier(0.22,1,0.36,1) both; }
 .story-card:nth-child(1) { animation-delay: 0.0s; }
 .story-card:nth-child(2) { animation-delay: 0.05s; }
@@ -2159,14 +2069,11 @@ html { scroll-behavior: smooth; }
 .story-card:nth-child(4) { animation-delay: 0.13s; }
 .story-card:nth-child(n+5) { animation-delay: 0.16s; }
 
-/* Smooth scroll */
 html { scroll-behavior: smooth; }
 #main-content { scroll-behavior: smooth; }
 
-/* Page transition */
 .page.active { animation: fadeInScale 0.35s cubic-bezier(0.22,1,0.36,1) both; }
 
-/* Bottom nav icon bounce on active */
 .bottom-btn.active .nav-icon-wrap {
   animation: iconBounce 0.4s cubic-bezier(0.34,1.56,0.64,1);
 }
@@ -2176,19 +2083,15 @@ html { scroll-behavior: smooth; }
   100% { transform: scale(1) translateY(-2px); }
 }
 
-/* Auth screen fade in */
 .auth-card { animation: fadeInUp 0.6s cubic-bezier(0.22,1,0.36,1) both 0.2s; }
 .auth-logo  { animation: fadeInDown 0.5s cubic-bezier(0.22,1,0.36,1) both 0.05s; }
 
-/* Friend cards animate in */
 .friend-card { animation: fadeInUp 0.38s cubic-bezier(0.22,1,0.36,1) both; }
 .friend-request-item { animation: slideInLeft 0.38s cubic-bezier(0.22,1,0.36,1) both; }
 @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
 
-/* Notification items */
 .notif-item { animation: fadeInUp 0.35s cubic-bezier(0.22,1,0.36,1) both; }
 
-/* Skeleton loading shimmer */
 @keyframes skeletonShimmer {
   0% { background-position: -400px 0; }
   100% { background-position: 400px 0; }
@@ -2199,7 +2102,6 @@ html { scroll-behavior: smooth; }
   animation: skeletonShimmer 1.5s infinite;
   border-radius: 8px;
 }
-
 </style>
 </head>
 <body>
@@ -2220,7 +2122,7 @@ html { scroll-behavior: smooth; }
   </defs>
 </svg>
 
-<!-- CONFIG MODAL - Hidden from users, admin configures via code -->
+<!-- CONFIG MODAL - Hidden from users -->
 <div id="config-modal" style="display:none"></div>
 
 <!-- SUSPENDED SCREEN -->
@@ -2248,7 +2150,6 @@ html { scroll-behavior: smooth; }
 
 <!-- AUTH SCREEN -->
 <div id="auth-screen">
-  <!-- Demo Showcase: app-feel preview cards with like/comment style -->
   <div class="auth-showcase">
     <div class="showcase-wrap c1">
       <div class="showcase-card">
@@ -2287,13 +2188,11 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
     </div>
-    <!-- Floating like / comment style badges -->
     <div class="float-badge fb1"><span>❤️👍😮</span><b>2.4k</b></div>
     <div class="float-badge fb2"><i class="fas fa-comment-dots" style="color:#1877f2"></i><b>186</b></div>
     <div class="float-badge fb3"><i class="fas fa-bolt" style="color:#F52798"></i><b>Live</b></div>
   </div>
 
-  <!-- Logo & Welcome -->
   <div class="auth-logo" style="width:100%;max-width:400px;text-align:center;padding-top:0">
     <div class="auth-logo-icon">♥️</div>
     <h1>Social Lite</h1>
@@ -2309,7 +2208,6 @@ html { scroll-behavior: smooth; }
       <button class="auth-tab" onclick="switchAuthTab('register')">Register</button>
     </div>
 
-    <!-- Login -->
     <div class="auth-form active" id="login-form">
       <div style="text-align:center;margin-bottom:18px">
         <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px">স্বাগতম! 👋</div>
@@ -2324,7 +2222,6 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
 
-    <!-- Register -->
     <div class="auth-form" id="register-form">
       <div style="text-align:center;margin-bottom:18px">
         <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:4px">নতুন অ্যাকাউন্ট খুলুন 🚀</div>
@@ -2340,7 +2237,6 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <!-- Name Modal (new Google users) -->
   <div id="google-name-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);z-index:9999;align-items:center;justify-content:center;padding:20px">
     <div style="background:var(--card);border-radius:20px;padding:32px 24px;width:100%;max-width:360px;box-shadow:0 24px 60px rgba(0,0,0,0.4)">
       <div style="text-align:center;margin-bottom:20px">
@@ -2359,7 +2255,6 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <!-- Copyright / App info at bottom -->
   <div style="margin-top:20px;text-align:center;color:rgba(255,255,255,0.5);font-size:12px;padding:0 20px 16px;z-index:1;width:100%">
     <div style="margin-bottom:6px;color:rgba(255,255,255,0.7);font-size:13px;font-weight:600">Social Lite — Social Network</div>
     <div>Version 2.0 • Real-time Firebase</div>
@@ -2374,7 +2269,6 @@ html { scroll-behavior: smooth; }
 
 <!-- MAIN APP -->
 <div id="app">
-  <!-- NAVBAR -->
   <div id="navbar">
     <div class="nav-logo">
       <div class="nav-logo-icon" style="background:linear-gradient(135deg,#DD27F5,#F52761);border-radius:10px;width:34px;height:34px;display:flex;align-items:center;justify-content:center">
@@ -2408,7 +2302,6 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <!-- SEARCH OVERLAY -->
   <div id="search-overlay" onclick="closeSearchBar()"></div>
   <div id="search-box">
     <i class="fas fa-search search-box-icon"></i>
@@ -2417,11 +2310,8 @@ html { scroll-behavior: smooth; }
   </div>
   <div class="search-results" id="search-results" style="display:none"></div>
 
-  <!-- MAIN CONTENT -->
   <div id="main-content">
-    <!-- HOME PAGE -->
     <div class="page active" id="page-home">
-      <!-- Stories -->
       <div class="stories-container" id="stories-container">
         <div class="story-card story-add-fb" onclick="openStoryModal()" id="story-add-card">
           <div style="position:relative;width:66px;height:66px">
@@ -2433,7 +2323,6 @@ html { scroll-behavior: smooth; }
           <p>Add Story</p>
         </div>
       </div>
-      <!-- Create Post -->
       <div class="create-post-bar">
         <div class="create-row">
           <div class="post-avatar" style="width:40px;height:40px">
@@ -2453,19 +2342,15 @@ html { scroll-behavior: smooth; }
           </button>
         </div>
       </div>
-      <!-- FEED -->
       <div id="feed-container">
         <div class="spinner"></div>
       </div>
     </div>
 
-    <!-- FRIENDS PAGE -->
     <div class="page" id="page-friends">
       <div class="page-title-bar">Friends</div>
-      <!-- Friend Requests -->
       <div class="section-title">Friend Requests</div>
       <div id="friend-requests-list"></div>
-      <!-- All Users -->
       <div class="section-title" style="display:flex;align-items:center;justify-content:space-between">
         <span>Friend Suggestions</span>
         <button onclick="refreshFriendSuggestions()" style="background:var(--primary-light);color:var(--primary);border:none;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700;cursor:pointer"><i class="fas fa-rotate-right"></i> Refresh</button>
@@ -2473,12 +2358,10 @@ html { scroll-behavior: smooth; }
       <div class="friend-grid" id="people-grid"></div>
     </div>
 
-    <!-- PROFILE PAGE -->
     <div class="page" id="page-profile">
       <div id="profile-content"></div>
     </div>
 
-    <!-- MESSAGES PAGE -->
     <div class="page" id="page-messages">
       <div class="page-title-bar" style="display:flex;align-items:center;justify-content:space-between">
         <span>Messages</span>
@@ -2495,12 +2378,12 @@ html { scroll-behavior: smooth; }
       <div id="messages-list-container"><div class="spinner"></div></div>
     </div>
 
-    <!-- CHAT PAGE -->
     <div class="page" id="page-chat">
       <div id="chat-header" style="display:flex;align-items:center;gap:12px;padding:12px 16px;">
         <button onclick="showPage('messages')" style="background:transparent;color:var(--text);font-size:20px;padding:4px"><i class="fas fa-arrow-left"></i></button>
         <div style="position:relative">
           <img id="chat-peer-avatar" src="" style="width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--primary)">
+          <div class="online-dot lg chat-online-dot" style="position:absolute;bottom:1px;right:1px;width:14px;height:14px;background:#42b72a;border-radius:50%;border:2px solid var(--card);display:none;z-index:5;"></div>
         </div>
         <div style="flex:1;min-width:0">
           <div id="chat-peer-name" style="font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis"></div>
@@ -2509,11 +2392,7 @@ html { scroll-behavior: smooth; }
         <button onclick="showPage('profile')" style="background:transparent;color:var(--text-secondary);font-size:18px;padding:4px"><i class="fas fa-info-circle"></i></button>
       </div>
       <div id="chat-messages"></div>
-      <!-- Emoji panel for chat -->
-      <div class="chat-emoji-panel" id="chat-emoji-panel">
-        <!-- filled by JS -->
-      </div>
-      <!-- Fixed bottom input bar -->
+      <div class="chat-emoji-panel" id="chat-emoji-panel"></div>
       <div id="chat-input-bar">
         <div class="chat-input-wrap">
           <button class="chat-input-emoji-btn" onclick="toggleChatEmojiPanel()" type="button"><i class="fas fa-face-smile"></i></button>
@@ -2523,13 +2402,11 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
 
-    <!-- NOTIFICATIONS PAGE -->
     <div class="page" id="page-notifications">
       <div class="page-title-bar">Notifications</div>
       <div id="notifications-list"><div class="spinner"></div></div>
     </div>
 
-    <!-- SETTINGS PAGE -->
     <div class="page" id="page-settings">
       <div class="page-title-bar">Menu</div>
       <div class="user-profile-card" onclick="goToMyProfile()">
@@ -2607,9 +2484,7 @@ html { scroll-behavior: smooth; }
     </div>
   </div>
 
-  <!-- BOTTOM NAV -->
   <div id="bottom-nav">
-    <!-- Home -->
     <button class="bottom-btn active" id="btn-home" onclick="homeButtonClick()">
       <div class="nav-icon-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2621,7 +2496,6 @@ html { scroll-behavior: smooth; }
       </div>
       <span class="nav-label">Home</span>
     </button>
-    <!-- Friends -->
     <button class="bottom-btn" id="btn-friends" onclick="showPage('friends')" style="position:relative">
       <div class="nav-icon-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2634,7 +2508,6 @@ html { scroll-behavior: smooth; }
       </div>
       <span class="nav-label">Friends</span>
     </button>
-    <!-- Create Post -->
     <button class="bottom-btn create-btn" id="btn-create" onclick="openPostModal()">
       <div class="nav-icon-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -2645,7 +2518,6 @@ html { scroll-behavior: smooth; }
       </div>
       <span class="nav-label" style="opacity:0">Post</span>
     </button>
-    <!-- Notifications -->
     <button class="bottom-btn" id="btn-notifications" onclick="showPage('notifications')">
       <div class="nav-icon-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2656,7 +2528,6 @@ html { scroll-behavior: smooth; }
       </div>
       <span class="nav-label">Alerts</span>
     </button>
-    <!-- Profile -->
     <button class="bottom-btn" id="btn-profile" onclick="showPage('profile')">
       <div class="nav-icon-wrap" id="nav-profile-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -2668,7 +2539,6 @@ html { scroll-behavior: smooth; }
     </button>
   </div>
 
-  <!-- FLOATING MESSAGE BUTTON - hidden now, replaced by nav -->
   <button id="msg-float-btn" style="display:none">
     <i class="fas fa-comment-dots"></i>
   </button>
@@ -2711,7 +2581,6 @@ html { scroll-behavior: smooth; }
       <textarea class="post-caption-input" id="post-caption" placeholder="কি মনে আসছে? (সর্বোচ্চ ১০০ শব্দ লেখা যাবে)" style="font-size:18px;min-height:100px" oninput="updateCaptionWordCount()"></textarea>
       <div id="caption-word-count" style="text-align:right;font-size:12px;font-weight:600;color:var(--text-secondary);margin-top:4px;margin-bottom:4px">১০০ শব্দ বাকি</div>
       
-      <!-- Image Preview Area -->
       <div id="upload-preview" style="display:none;position:relative;border-radius:14px;overflow:hidden;margin-bottom:12px;background:var(--hover)">
         <img id="preview-image" alt="Preview" style="width:100%;max-height:400px;object-fit:cover;display:block">
         <button onclick="removeSelectedImage(event)" style="position:absolute;top:8px;right:8px;background:rgba(0,0,0,0.65);color:#fff;width:34px;height:34px;border-radius:50%;border:none;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center">
@@ -2719,7 +2588,6 @@ html { scroll-behavior: smooth; }
         </button>
       </div>
       
-      <!-- Upload click area (when no image) -->
       <div id="upload-click-area" onclick="triggerFileInput()" style="border:2px dashed var(--border);border-radius:14px;padding:24px;text-align:center;cursor:pointer;margin-bottom:12px;transition:all 0.2s" onmouseover="this.style.borderColor='var(--primary)'" onmouseout="this.style.borderColor='var(--border)'">
         <i class="fas fa-image" style="font-size:36px;color:var(--primary);margin-bottom:8px;display:block"></i>
         <div style="font-size:15px;font-weight:700;color:var(--text)">ফটো যোগ করুন</div>
@@ -2732,7 +2600,6 @@ html { scroll-behavior: smooth; }
         <div class="upload-progress-bar" id="upload-progress-bar" style="width:0%"></div>
       </div>
 
-      <!-- Add to post row -->
       <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border:1.5px solid var(--border);border-radius:12px;margin-bottom:14px">
         <span style="font-size:14px;font-weight:600;color:var(--text)">পোস্টে যোগ করুন</span>
         <div style="display:flex;gap:16px;font-size:22px">
@@ -2785,25 +2652,21 @@ html { scroll-behavior: smooth; }
       <span id="sv-name"></span><br>
       <span class="story-viewer-time" id="sv-time"></span>
     </div>
-    <!-- Views & Reactions info button (owner only) -->
     <button id="sv-info-btn" onclick="toggleStoryInfoPanel()" style="display:none;margin-left:8px;background:rgba(0,0,0,0.4);border:none;color:#fff;border-radius:20px;padding:4px 10px;font-size:12px;cursor:pointer"><i class="fas fa-eye"></i> <span id="sv-view-count">0</span></button>
   </div>
   <button class="story-viewer-close" onclick="closeStoryViewer()"><i class="fas fa-xmark"></i></button>
   
-  <!-- Story info panel (viewers + reactors) -->
   <div id="story-info-panel" style="display:none;position:absolute;bottom:80px;left:0;right:0;background:rgba(0,0,0,0.8);padding:12px 16px;max-height:200px;overflow-y:auto;z-index:11">
     <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:8px">👁️ Viewers & Reactions</div>
     <div id="story-viewers-list"></div>
   </div>
 
-  <!-- Story Reply Input - একদম নিচে -->
   <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;display:flex;gap:8px;align-items:center;z-index:12">
     <div style="flex:1;display:flex;align-items:center;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:22px;padding:10px 16px;gap:8px;backdrop-filter:blur(4px)">
       <input type="text" id="story-reply-input" placeholder="Reply to story..." style="flex:1;background:transparent;font-size:14px;color:#fff;border:none;outline:none" onkeydown="if(event.key==='Enter')sendStoryReply()">
     </div>
     <button onclick="sendStoryReply()" style="width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;flex-shrink:0"><i class="fas fa-paper-plane"></i></button>
   </div>
-  <!-- Story Reactions & View Count - reply এর উপরে -->
   <div class="story-reaction-bar">
     <div style="display:flex;gap:8px;align-items:center">
       <button class="story-react-btn" id="sr-love" onclick="reactToStory('❤️')" title="Love">❤️</button>
@@ -2880,10 +2743,7 @@ html { scroll-behavior: smooth; }
     </div>
     <div class="modal-body" id="comment-modal-body" style="padding-bottom:0;max-height:55vh;overflow-y:auto;padding:8px 0">
     </div>
-    <!-- Emoji quick panel inside comment modal -->
-    <div id="comment-modal-emoji-panel" style="display:none;padding:8px 14px;flex-wrap:wrap;gap:4px;border-top:1px solid var(--border);background:var(--bg);max-height:120px;overflow-y:auto">
-      <!-- filled by JS -->
-    </div>
+    <div id="comment-modal-emoji-panel" style="display:none;padding:8px 14px;flex-wrap:wrap;gap:4px;border-top:1px solid var(--border);background:var(--bg);max-height:120px;overflow-y:auto"></div>
     <div style="padding:10px 14px;border-top:1px solid var(--border)">
       <div class="comment-input-row" style="margin-bottom:0;align-items:center">
         <div class="comment-av">
@@ -2929,7 +2789,6 @@ html { scroll-behavior: smooth; }
         <div><strong>প্রিমিয়াম সুবিধা</strong>নামের পাশে নীল ব্যাচ সারাক্ষণ দেখা যাবে</div>
       </div>
 
-      <!-- FREE 1-DAY CLAIM SECTION -->
       <div id="claim-section">
         <div style="background:linear-gradient(135deg,#10b981,#059669);border-radius:14px;padding:14px 16px;margin-bottom:14px;color:#fff;text-align:center">
           <div style="font-size:13px;font-weight:700;opacity:0.9;margin-bottom:2px">🎁 বিশেষ অফার</div>
@@ -2944,7 +2803,6 @@ html { scroll-behavior: smooth; }
         </p>
       </div>
 
-      <!-- ACTIVE BADGE INFO -->
       <div id="claimed-section" style="display:none">
         <div class="claimed-info" id="badge-active-info">
           <i class="fas fa-circle-check"></i>
@@ -2953,7 +2811,6 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <!-- EXPIRED BADGE INFO -->
       <div id="expired-section" style="display:none">
         <div style="background:#fff3cd;border:1.5px solid #fcd34d;border-radius:12px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px">
           <span style="font-size:22px">⏰</span>
@@ -2964,7 +2821,6 @@ html { scroll-behavior: smooth; }
         </div>
       </div>
 
-      <!-- UPGRADE PLANS -->
       <div id="upgrade-plans-section" style="display:none">
         <div style="font-size:13px;font-weight:800;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px">
           <i class="fas fa-crown" style="color:#f59e0b;margin-right:6px"></i>প্ল্যান আপগ্রেড করুন
@@ -3131,6 +2987,62 @@ html { scroll-behavior: smooth; }
 <!-- TOAST -->
 <div id="toast"></div>
 
+<!-- ACCOUNT SECURITY MODAL -->
+<div id="account-security-overlay" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px" onclick="closeAccountSecurity(event)">
+  <div style="background:var(--card);border-radius:20px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:fadeInScale 0.3s cubic-bezier(0.22,1,0.36,1)">
+    <div style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);padding:24px 20px 20px;position:relative;text-align:center">
+      <div style="width:60px;height:60px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px">🛡️</div>
+      <div style="color:#fff;font-size:20px;font-weight:800">একাউন্ট সিকিউরিটি</div>
+      <div style="color:rgba(255,255,255,0.8);font-size:13px;margin-top:4px">আপনার লগইন তথ্য</div>
+      <button onclick="closeAccountSecurityBtn()" style="position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer">✕</button>
+    </div>
+    <div style="padding:20px">
+      <div style="background:#fff8e1;border:1px solid #fcd34d;border-radius:12px;padding:12px 14px;margin-bottom:18px;display:flex;align-items:flex-start;gap:10px">
+        <span style="font-size:18px">⚠️</span>
+        <div style="font-size:12px;color:#92400e;font-weight:600;line-height:1.5">এই তথ্য গোপন রাখুন। কাউকে শেয়ার করবেন না।</div>
+      </div>
+      <div style="margin-bottom:14px">
+        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px">
+          <i class="fas fa-envelope" style="color:#10b981;margin-right:5px"></i>Gmail / Email
+        </div>
+        <div style="position:relative">
+          <div id="sec-email-display" style="background:var(--hover);border:1.5px solid var(--border);border-radius:12px;padding:14px 48px 14px 16px;font-size:15px;font-weight:600;color:var(--text);word-break:break-all;min-height:48px;display:flex;align-items:center">
+            <span id="sec-email-val">লোড হচ্ছে...</span>
+          </div>
+          <button onclick="copySecInfo('email')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:8px;background:var(--primary-light);color:var(--primary);font-size:13px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+      <div style="margin-bottom:20px">
+        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px">
+          <i class="fas fa-lock" style="color:#10b981;margin-right:5px"></i>পাসওয়ার্ড
+        </div>
+        <div style="position:relative">
+          <div id="sec-pass-display" style="background:var(--hover);border:1.5px solid var(--border);border-radius:12px;padding:14px 80px 14px 16px;font-size:15px;font-weight:600;color:var(--text);min-height:48px;display:flex;align-items:center">
+            <span id="sec-pass-val" style="letter-spacing:3px">••••••••</span>
+          </div>
+          <div style="position:absolute;right:10px;top:50%;transform:translateY(-50%);display:flex;gap:6px">
+            <button onclick="toggleSecPassword()" id="sec-pass-eye" style="width:32px;height:32px;border-radius:8px;background:var(--hover);color:var(--text-secondary);font-size:13px;border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center">
+              <i class="fas fa-eye"></i>
+            </button>
+            <button onclick="copySecInfo('pass')" style="width:32px;height:32px;border-radius:8px;background:var(--primary-light);color:var(--primary);font-size:13px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+        </div>
+        <div id="sec-pass-note" style="font-size:11px;color:var(--text-secondary);margin-top:6px;padding-left:4px;display:none">
+          ⚠️ পাসওয়ার্ড দেখা শেষে চোখ আইকনে ক্লিক করে লুকিয়ে রাখুন।
+        </div>
+      </div>
+      <div style="background:var(--primary-light);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px">
+        <i class="fas fa-circle-info" style="color:var(--primary);font-size:16px"></i>
+        <div style="font-size:12px;color:var(--primary);font-weight:600;line-height:1.5">একাউন্টে লগইন করতে এই Gmail ও পাসওয়ার্ড ব্যবহার করুন।</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 // ===== GLOBALS =====
 let APP_CONFIG = null;
@@ -3139,9 +3051,10 @@ let auth = null;
 let currentUser = null;
 let currentUserData = null;
 let currentPage = 'home';
-let activePostId = null; // for comment modal
+let activePostId = null;
 let feedListeners = [];
 let notifListener = null;
+let _searchTimeout = null; // Debounce timer
 
 // ===== GLOBAL FRIENDS TRACKER =====
 let myFriends = {};
@@ -3199,32 +3112,28 @@ async function postCardAddFriend(uid, btn) {
 const DEFAULT_AVATAR = 'https://ui-avatars.com/api/?name=U&background=1877f2&color=fff&size=128';
 const REACTIONS = ['👍','❤️','😂','😮','😢','😡'];
 
-// ===== ADMIN CONFIG (অ্যাডমিন এখানে Firebase ও ImgBB সেটআপ করবেন) =====
-// ⚠️ নিচের তথ্যগুলো আপনার Firebase Console থেকে নিন এবং এখানে বসান
-const firebaseConfig = {
-  apiKey: "AIzaSyCWmLnw7P63QfHkfLFdUh21BDjV3emXcWQ",
-  authDomain: "facebook-3e7b1.firebaseapp.com",
-  projectId: "facebook-3e7b1",
-  storageBucket: "facebook-3e7b1.firebasestorage.app",
-  messagingSenderId: "351582614237",
-  appId: "1:351582614237:web:4e1f9a1220fb4c73d32134"
+// ===== ADMIN CONFIG =====
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyDQzUnMKts5vr22bwPUuhxSXwJFEZQI9jA",
+  authDomain: "hi-hocker.firebaseapp.com",
+  databaseURL: "https://hi-hocker-default-rtdb.firebaseio.com",
+  projectId: "hi-hocker",
+  storageBucket: "hi-hocker.firebasestorage.app",
+  messagingSenderId: "927644845391",
+  appId: "1:927644845391:web:880d6f9fa6012f1f69713a",
+  measurementId: "G-R1TGZP7MX3"
 };
+const IMGBB_API_KEY = "345a5d3bde726d066179a3f591e1e971";
 
-const IMGBB_API_KEY = "345a5d3bde726d066179a3f591e1e971"; // imgbb.com → API থেকে নিন
-
-// ===== CONFIG (ইউজারদের কাছ থেকে কোনো ইনপুট নেওয়া হয় না) =====
-function saveConfig() { /* admin only - not used */ }
+function saveConfig() { /* admin only */ }
 
 function loadConfig() {
   APP_CONFIG = {
-    apiKey: firebaseConfig.apiKey,
-    authDomain: firebaseConfig.authDomain,
-    databaseURL: firebaseConfig.databaseURL,
-    projectId: firebaseConfig.projectId,
-    storageBucket: firebaseConfig.storageBucket,
-    messagingSenderId: firebaseConfig.messagingSenderId,
-    appId: firebaseConfig.appId,
-    measurementId: firebaseConfig.measurementId,
+    apiKey: FIREBASE_CONFIG.apiKey,
+    authDomain: FIREBASE_CONFIG.authDomain,
+    databaseURL: FIREBASE_CONFIG.databaseURL,
+    projectId: FIREBASE_CONFIG.projectId,
+    appId: FIREBASE_CONFIG.appId,
     imgbbKey: IMGBB_API_KEY
   };
   initFirebase();
@@ -3245,7 +3154,6 @@ async function initFirebase() {
     });
     db = firebase.database();
     auth = firebase.auth();
-    // ✅ LOCAL persistence — refresh করলেও login থাকবে
     await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
     auth.onAuthStateChanged(onAuthStateChanged);
   } catch(e) {
@@ -3275,7 +3183,6 @@ function switchAuthTab(tab) {
   document.getElementById('register-form').classList.toggle('active', tab==='register');
 }
 
-// Pending Google credential (used during new-user name step)
 let _pendingGoogleCred = null;
 let _pendingGoogleUser = null;
 
@@ -3287,10 +3194,6 @@ async function signInWithGoogle() {
     btns.forEach(b => { b.classList.add('loading'); b.querySelector('span').textContent = 'অপেক্ষা করুন...'; });
 
     await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-    // signInWithPopup — Firebase-এর official সুপারিশ অনুযায়ী, যেহেতু app Firebase Hosting-এ
-    // না হয়ে Netlify-তে আছে, signInWithRedirect cross-domain iframe storage ব্লক হওয়ার কারণে
-    // ব্যর্থ হয় (Safari/Chrome ITP)। Popup এই সমস্যার বাইরে, এবং Authorized domains-এ
-    // sociallitenet.netlify.app যোগ করা থাকায় এখন এটা কাজ করার কথা।
     const result = await auth.signInWithPopup(provider);
     await handleGoogleSignInResult(result.user);
     btns.forEach(b => { b.classList.remove('loading'); b.querySelector('span').textContent = 'Continue with Google'; });
@@ -3304,12 +3207,10 @@ async function signInWithGoogle() {
 }
 
 async function handleGoogleSignInResult(user) {
-  // Check if user already exists in DB
   const snap = await db.ref('users/' + user.uid).once('value');
   if (snap.exists()) {
-    // Existing user → onAuthStateChanged will handle the rest
+    // Existing user → onAuthStateChanged will handle
   } else {
-    // New user → show name modal
     _pendingGoogleUser = user;
     openGoogleNameModal(user);
   }
@@ -3318,7 +3219,6 @@ async function handleGoogleSignInResult(user) {
 function openGoogleNameModal(user) {
   const modal = document.getElementById('google-name-modal');
   modal.style.display = 'flex';
-  // Pre-fill with Google display name if available
   const gName = user.displayName || '';
   document.getElementById('gname-input').value = gName;
   document.getElementById('gname-email-show').textContent = user.email || '';
@@ -3362,7 +3262,6 @@ async function finishGoogleSignup() {
     document.getElementById('google-name-modal').style.display = 'none';
     _pendingGoogleUser = null;
     showToast('✅ অ্যাকাউন্ট তৈরি হয়েছে!');
-    // Manually trigger app load since onAuthStateChanged already fired
     await onAuthStateChanged(auth.currentUser);
   } catch(e) {
     showToast('❌ ' + e.message);
@@ -3378,7 +3277,6 @@ async function signOutUser() {
   if (auth) await auth.signOut();
 }
 
-// ===== VALIDATION HELPERS =====
 function limitNameWords(input) {
   const hintId = input.id === 'gname-input' ? 'gname-word-hint' : 'name-word-hint';
   const hint = document.getElementById(hintId);
@@ -3388,33 +3286,12 @@ function limitNameWords(input) {
     hint.textContent = count + '/১২ শব্দ';
     hint.style.color = count >= 12 ? 'var(--danger)' : 'var(--text-secondary)';
   }
-  // যদি ১২ শব্দের বেশি হয়, বাড়তি অংশ কেটে দাও
   if (count > 12) {
     const allowed = words.slice(0, 12).join(' ');
-    // trailing space রাখতে চাইলে (যদি 12তম শব্দের পরে space থাকে) কেটে দাও
     input.value = allowed;
     if (hint) { hint.textContent = '১২/১২ শব্দ'; hint.style.color = 'var(--danger)'; }
   }
 }
-
-function isStrongPassword(p) {
-  // At least 8 chars, one uppercase, one lowercase, one digit, one special char
-  return p.length >= 8 &&
-    /[A-Z]/.test(p) &&
-    /[a-z]/.test(p) &&
-    /[0-9]/.test(p) &&
-    /[^A-Za-z0-9]/.test(p);
-}
-
-function isValidEmail(e) {
-  // Basic format check
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) return false;
-  // Block profanity/hate speech in email local part
-  const localPart = e.split('@')[0].toLowerCase().replace(/[._\-+]/g, '');
-  return !PROFANITY_LIST.some(w => localPart.includes(w.toLowerCase()));
-}
-
-
 
 // ===== VERIFIED BADGE =====
 async function openVerifiedModal() {
@@ -3423,36 +3300,29 @@ async function openVerifiedModal() {
   const now = Date.now();
   const freeClaimed = currentUserData?.verifiedBadgeFreeClaimed;
 
-  // Hide all sections first
   document.getElementById('claim-section').style.display = 'none';
   document.getElementById('claimed-section').style.display = 'none';
   document.getElementById('expired-section').style.display = 'none';
   document.getElementById('upgrade-plans-section').style.display = 'none';
 
   if (badgeData && badgeData.active && badgeData.expiresAt > now) {
-    // Badge is active
     document.getElementById('claimed-section').style.display = 'block';
     document.getElementById('upgrade-plans-section').style.display = 'block';
     const expDate = new Date(badgeData.expiresAt).toLocaleDateString('bn-BD');
     const daysLeft = Math.ceil((badgeData.expiresAt - now) / (1000 * 60 * 60 * 24));
     document.getElementById('badge-expiry-text').textContent = `মেয়াদ: ${expDate} পর্যন্ত (${daysLeft} দিন বাকি)`;
-    // Load wallet balance
     await loadWalletBalance();
   } else if (freeClaimed) {
-    // Free used, badge expired
     document.getElementById('expired-section').style.display = 'block';
     document.getElementById('upgrade-plans-section').style.display = 'block';
     await loadWalletBalance();
   } else {
-    // Never claimed free
     document.getElementById('claim-section').style.display = 'block';
   }
-
   document.getElementById('verified-modal').classList.add('active');
 }
 
 async function loadWalletBalance() {
-  // Wallet balance = totalEarnings from monetization (view income)
   try {
     const monetizeSnap = await db.ref('users/' + currentUser.uid + '/monetization').once('value');
     const isMonetized = !!(monetizeSnap.val() && monetizeSnap.val().active);
@@ -3481,13 +3351,12 @@ async function claimVerifiedBadge() {
   btn.disabled = true;
   btn.innerHTML = '<div class="spinner" style="width:20px;height:20px;margin:0;border-width:2px"></div>';
   try {
-    const expiresAt = Date.now() + (1 * 24 * 60 * 60 * 1000); // 1 day free
+    const expiresAt = Date.now() + (1 * 24 * 60 * 60 * 1000);
     const badgeData = { active: true, claimedAt: Date.now(), expiresAt, type: 'free_1day' };
     await db.ref('users/' + currentUser.uid + '/verifiedBadge').set(badgeData);
     await db.ref('users/' + currentUser.uid + '/verifiedBadgeFreeClaimed').set(true);
     currentUserData.verifiedBadge = badgeData;
     currentUserData.verifiedBadgeFreeClaimed = true;
-    // Update UI
     document.getElementById('claim-section').style.display = 'none';
     document.getElementById('claimed-section').style.display = 'block';
     document.getElementById('upgrade-plans-section').style.display = 'block';
@@ -3496,7 +3365,6 @@ async function claimVerifiedBadge() {
     await loadWalletBalance();
     updateBadgeUI();
     showToast('✅ ১ দিনের ফ্রি Verified Badge পাওয়া গেছে!');
-    // Schedule auto-remove check on next load (Firebase-based)
   } catch(e) {
     showToast('Error: ' + e.message);
     btn.disabled = false;
@@ -3505,14 +3373,12 @@ async function claimVerifiedBadge() {
 }
 
 async function buyBadgePlan(days, price) {
-  // Check monetization active
   const monetizeSnap = await db.ref('users/' + currentUser.uid + '/monetization').once('value');
   const isMonetized = !!(monetizeSnap.val() && monetizeSnap.val().active);
   if (!isMonetized) {
     showToast('⚠️ আগে Monetization চালু করুন!');
     return;
   }
-  // Check wallet balance (totalEarnings from posts)
   let totalEarnings = 0;
   const postsSnap = await db.ref('posts').orderByChild('authorId').equalTo(currentUser.uid).once('value');
   if (postsSnap.exists()) {
@@ -3527,16 +3393,13 @@ async function buyBadgePlan(days, price) {
     showToast(`❌ ওয়ালেটে পর্যাপ্ত টাকা নেই! আপনার: ৳${netBalance}, দরকার: ৳${price}`);
     return;
   }
-  // Confirm
   if (!confirm(`${days} দিনের Verified Badge কিনবেন? ৳${price} ওয়ালেট থেকে কাটা হবে।`)) return;
 
   try {
-    // Deduct from wallet (store deduction in Firebase)
     const deductedSoFar = alreadyDeducted + price;
     await db.ref('users/' + currentUser.uid + '/walletDeducted').set(deductedSoFar);
     currentUserData.walletDeducted = deductedSoFar;
 
-    // Extend badge
     const now = Date.now();
     const currentExpiry = (currentUserData?.verifiedBadge?.expiresAt && currentUserData.verifiedBadge.expiresAt > now)
       ? currentUserData.verifiedBadge.expiresAt : now;
@@ -3545,7 +3408,6 @@ async function buyBadgePlan(days, price) {
     await db.ref('users/' + currentUser.uid + '/verifiedBadge').set(badgeData);
     currentUserData.verifiedBadge = badgeData;
 
-    // Reload wallet & UI
     document.getElementById('expired-section').style.display = 'none';
     document.getElementById('claimed-section').style.display = 'block';
     const expDate = new Date(newExpiry).toLocaleDateString('bn-BD');
@@ -3565,12 +3427,10 @@ function updateBadgeUI() {
   const badgeData = currentUserData?.verifiedBadge;
   const now = Date.now();
   const isVerified = badgeData && badgeData.active && badgeData.expiresAt > now;
-  // Auto-remove expired badge from Firebase
   if (badgeData && badgeData.active && badgeData.expiresAt <= now) {
     db.ref('users/' + currentUser.uid + '/verifiedBadge/active').set(false);
     if (currentUserData.verifiedBadge) currentUserData.verifiedBadge.active = false;
   }
-  // Settings indicator
   const indicator = document.getElementById('settings-badge-indicator');
   const desc = document.getElementById('settings-badge-desc');
   if (isVerified) {
@@ -3588,29 +3448,21 @@ function updateBadgeUI() {
 async function onAuthStateChanged(user) {
   if (user) {
     currentUser = user;
-    // Check status
     const snap = await db.ref('users/'+user.uid).once('value');
     if (!snap.exists()) {
-      // DB তে user নেই — যদি Google name modal খোলা থাকে তাহলে wait করো
-      // নাহলে এটা orphan account, signout করো
       if (!_pendingGoogleUser) {
-        // Refresh এ এলে name modal দেখাও (user Google এ logged in কিন্তু DB নেই)
         openGoogleNameModal(user);
       }
       return;
     }
     currentUserData = snap.val();
-    // Auto-unsuspend if 5-minute suspension has expired
-    // NOTE: posts remain permanently hidden even after unsuspend (postsHiddenPermanently flag)
     if (currentUserData.status === 'suspended' && currentUserData.suspendedUntil && Date.now() > currentUserData.suspendedUntil) {
       await db.ref('users/'+user.uid).update({ status: 'active', suspendedUntil: null, suspendReason: null });
       currentUserData.status = 'active';
-      // Posts stay hidden — postsHiddenPermanently flag remains, user must create new posts
     }
     if (currentUserData.status === 'banned' || currentUserData.status === 'suspended') {
       const suspMsg = document.getElementById('suspended-msg');
       if (suspMsg && currentUserData.suspendedUntil) {
-        // Show live countdown in minutes:seconds
         startSuspendCountdown(currentUserData.suspendedUntil, user.uid);
       } else if (suspMsg) {
         suspMsg.textContent = `আপনার অ্যাকাউন্ট সাসপেন্ড হয়েছে। কারণ: ${currentUserData.suspendReason||'Multiple reports'}`;
@@ -3632,7 +3484,6 @@ async function onAuthStateChanged(user) {
     listenMessageBadge();
     listenFriendRequestBadge();
     listenMyFriends();
-    // Apply saved theme
     if (localStorage.getItem('sb_theme')==='dark') {
       document.documentElement.setAttribute('data-theme','dark');
       document.getElementById('theme-toggle').classList.add('on');
@@ -3655,12 +3506,10 @@ function updateUIWithUser() {
   document.getElementById('settings-name').textContent = name;
   document.getElementById('modal-user-name').textContent = name;
   document.getElementById('comment-modal-avatar').src = av;
-  // Bottom nav profile icon → show user avatar
   const navProfileWrap = document.getElementById('nav-profile-wrap');
   if (navProfileWrap) {
     navProfileWrap.innerHTML = `<img src="${av}" alt="" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid var(--primary)">`;
   }
-  // Story add button avatar
   const storyAddImg = document.getElementById('story-add-avatar-img');
   if (storyAddImg) storyAddImg.src = av;
   updateBadgeUI();
@@ -3669,12 +3518,10 @@ function updateUIWithUser() {
 
 // ===== NAVIGATION =====
 function showPage(page) {
-  const prevPage = currentPage;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.bottom-btn').forEach(b=>b.classList.remove('active'));
   const pageEl = document.getElementById('page-'+page);
   pageEl.classList.add('active');
-  // Smooth scroll to top on page switch
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const btnMap = {home:'btn-home',friends:'btn-friends',notifications:'btn-notifications',profile:'btn-profile',messages:'btn-friends',chat:'btn-friends'};
   if (btnMap[page]) document.getElementById(btnMap[page]).classList.add('active');
@@ -3682,13 +3529,10 @@ function showPage(page) {
   if (page==='profile') loadMyProfile();
   if (page==='notifications') {
     markNotifsRead();
-    // Load all notifications newest first (no limit - never delete)
     db.ref('notifications/'+currentUser.uid).once('value', snap => renderNotifications(snap));
-    // Also re-render on real-time updates while on page
     db.ref('notifications/'+currentUser.uid).off('value');
     db.ref('notifications/'+currentUser.uid).on('value', snap => {
       if (currentPage === 'notifications') renderNotifications(snap);
-      // update badge count
       let count = 0;
       if (snap.exists()) snap.forEach(ch => { if (!ch.val().read) count++; });
       const badge = document.getElementById('notif-badge');
@@ -3700,7 +3544,7 @@ function showPage(page) {
 
 // ===== FEED - Real-time all users posts =====
 let feedRef = null;
-let feedPostIds = []; // Track rendered post order
+let feedPostIds = [];
 
 function loadFeed() {
   const container = document.getElementById('feed-container');
@@ -3716,12 +3560,10 @@ function loadFeed() {
     const posts = [];
     snap.forEach(ch => {
       const val = ch.val();
-      // Skip hidden/auto-moderated posts
       if (val && val.createdAt && !val.hidden) posts.push({id: ch.key, ...val});
     });
     posts.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
 
-    // Smart update: only add new posts, update existing ones without scroll jump
     const newIds = posts.map(p => p.id);
     const isFirstLoad = feedPostIds.length === 0 && container.querySelector('.spinner');
 
@@ -3731,7 +3573,6 @@ function loadFeed() {
       feedPostIds = newIds;
       updatePostAddFriendBtns();
     } else {
-      // Add new posts at top without affecting scroll
       const scrollY = window.scrollY;
       const addedPosts = posts.filter(p => !feedPostIds.includes(p.id));
       if (addedPosts.length > 0) {
@@ -3747,11 +3588,9 @@ function loadFeed() {
             card.style.transform = 'translateY(0)';
           });
         });
-        // Keep scroll position
         window.scrollTo(0, scrollY + addedPosts.length * 2);
         updatePostAddFriendBtns();
       }
-      // Update like/reaction counts on existing posts in place
       posts.forEach(post => {
         const existingCard = document.getElementById('post-'+post.id);
         if (existingCard) updatePostStats(existingCard, post);
@@ -3762,7 +3601,6 @@ function loadFeed() {
 }
 
 function updatePostStats(card, post) {
-  // Update like button without re-rendering
   const likeBtn = card.querySelector('#like-btn-'+post.id);
   if (likeBtn) {
     const isLiked = post.likes && post.likes[currentUser.uid];
@@ -3773,7 +3611,6 @@ function updatePostStats(card, post) {
     if (icon) icon.className = (myReaction||isLiked) ? 'fas fa-thumbs-up' : 'far fa-thumbs-up';
     if (span) span.textContent = myReaction || 'Like';
   }
-  // Update reaction/like counts
   const statsEl = card.querySelector('.post-stats');
   if (statsEl) {
     const likeCount = post.likes ? Object.keys(post.likes).length : 0;
@@ -3800,7 +3637,6 @@ function getCreatorBadgeHTML(isCreator, large) {
   return `<span class="${cls}" title="Creator — Monetization Active"><i class="fas fa-pen-nib"></i></span>`;
 }
 
-// Check if a user has monetization active
 function isUserMonetized(userData) {
   return !!(userData && userData.monetization && userData.monetization.active);
 }
@@ -3863,10 +3699,8 @@ function createPostCard(post) {
     <div class="comments-section" id="comments-${post.id}"></div>
   `;
   loadTopComments(post.id);
-  // Attach online status dot
   const dot = div.querySelector('#online-post-'+post.id);
   if (dot) listenUserOnline(post.authorId, dot);
-  // Increment view counter (only for other people's posts)
   if (post.authorId !== currentUser.uid) {
     setTimeout(() => incrementPostView(post.id), 1500);
   }
@@ -3922,7 +3756,8 @@ function openPostModal(type) {
 }
 function closePostModal() {
   document.getElementById('post-modal').classList.remove('active');
-  document.getElementById('post-caption').value = ''; const _ctr = document.getElementById('caption-word-count'); if(_ctr){_ctr.textContent='১০০ শব্দ বাকি';_ctr.style.color='var(--text-secondary)';_ctr.style.fontWeight='600';};
+  document.getElementById('post-caption').value = '';
+  const _ctr = document.getElementById('caption-word-count'); if(_ctr){_ctr.textContent='১০০ শব্দ বাকি';_ctr.style.color='var(--text-secondary)';_ctr.style.fontWeight='600';}
   selectedImageFile = null;
   selectedImageBase64 = null;
   document.getElementById('preview-image').src = '';
@@ -3947,7 +3782,6 @@ function previewImage(input) {
   reader.onerror = () => showToast('ছবি পড়তে সমস্যা হয়েছে');
   reader.onload = (e) => {
     selectedImageBase64 = e.target.result.split(',')[1];
-    // Show preview, hide click area
     document.getElementById('preview-image').src = e.target.result;
     document.getElementById('upload-preview').style.display = 'block';
     document.getElementById('upload-click-area').style.display = 'none';
@@ -3965,7 +3799,6 @@ function removeSelectedImage(e) {
   document.getElementById('file-input').value = '';
 }
 
-// ===== IMAGE UPLOAD - ImgBB with compression =====
 async function compressImage(base64, maxWidth = 1200, quality = 0.85) {
   return new Promise((resolve) => {
     const img = new Image();
@@ -3984,7 +3817,6 @@ async function compressImage(base64, maxWidth = 1200, quality = 0.85) {
 }
 
 async function uploadToImgBB(base64) {
-  // Compress image first
   let uploadBase64 = base64;
   try { uploadBase64 = await compressImage(base64); } catch(e) {}
 
@@ -4019,11 +3851,8 @@ function updateCaptionWordCount() {
   const raw = ta.value;
   const words = raw.trim() === '' ? [] : raw.trim().split(/\s+/).filter(Boolean);
 
-  // ১০০ শব্দের বেশি হলে কেটে ফেলো
   if (words.length > MAX) {
-    // cursor position রাখার জন্য শেষ ১০০ শব্দ পর্যন্ত রাখো
     const allowed = words.slice(0, MAX).join(' ');
-    // trailing space ধরো (যদি user স্পেস দিয়ে ১০১তম শব্দ শুরু করে)
     ta.value = allowed;
   }
 
@@ -4045,11 +3874,10 @@ function updateCaptionWordCount() {
 }
 
 async function submitPost() {
-  // ── ৩ মিনিট cooldown চেক ──
   const now = Date.now();
   const lastPost = parseInt(localStorage.getItem('lastPostTime') || '0', 10);
   const elapsed = now - lastPost;
-  const COOLDOWN = 3 * 60 * 1000; // 3 মিনিট
+  const COOLDOWN = 3 * 60 * 1000;
   if (lastPost > 0 && elapsed < COOLDOWN) {
     const remaining = Math.ceil((COOLDOWN - elapsed) / 1000);
     const mins = Math.floor(remaining / 60);
@@ -4058,7 +3886,6 @@ async function submitPost() {
     return;
   }
 
-  // ── ক্যাপশন: ১০০ শব্দের বেশি হলে অটো কেটে ১০০ শব্দ রাখো ──
   const rawCaption = document.getElementById('post-caption').value.trim();
   const allCaptionWords = rawCaption ? rawCaption.split(/\s+/).filter(Boolean) : [];
   const caption = allCaptionWords.length > 100
@@ -4112,10 +3939,8 @@ async function submitPost() {
       imageUrl: imageUrl || '',
       createdAt: Date.now()
     };
-    // Push to global posts feed (homepage)
     const ref = await db.ref('posts').push(postData);
     if (ref && ref.key) {
-      // ALSO save reference to user's profile timeline
       await db.ref(`userPosts/${currentUser.uid}/${ref.key}`).set({
         createdAt: Date.now(),
         postId: ref.key
@@ -4217,7 +4042,6 @@ function loadStories() {
       if (s.authorId === currentUser.uid) myStories.push(s);
       else otherStories.push(s);
     });
-    // Own stories first, then others
     [...myStories, ...otherStories].forEach(s => {
       const hoursLeft = Math.max(0, Math.ceil((s.expiresAt - currentNow) / 3600000));
       const div = document.createElement('div');
@@ -4225,7 +4049,6 @@ function loadStories() {
       div.onclick = () => viewStory(s);
       const isOwn = s.authorId === currentUser.uid;
       const ringClass = isOwn ? 'story-ring own' : 'story-ring';
-      // Build inner: if story has image → show it as bg + small avatar badge; else → show avatar full
       const innerHTML = s.imageUrl
         ? `<img class="story-preview-img" src="${esc(s.imageUrl)}" alt="" loading="lazy"><img class="story-avatar-overlay" src="${esc(s.avatar||DEFAULT_AVATAR)}" alt="" loading="lazy">`
         : `<img src="${esc(s.avatar||DEFAULT_AVATAR)}" alt="" loading="lazy">`;
@@ -4246,7 +4069,6 @@ function loadStories() {
     });
   });
   
-  // Refresh stories every 5 minutes to hide expired ones
   setTimeout(() => {
     if (currentUser) loadStories();
   }, 5 * 60 * 1000);
@@ -4263,17 +4085,14 @@ function viewStory(s) {
   document.getElementById('sv-name').textContent = s.authorName;
   document.getElementById('sv-time').textContent = getTimeAgo(s.createdAt);
   
-  // Show info button only to story owner
   const infoBtn = document.getElementById('sv-info-btn');
   if (s.authorId === currentUser.uid) { infoBtn.style.display='inline-flex'; }
   else { infoBtn.style.display='none'; }
   document.getElementById('story-info-panel').style.display='none';
   
-  // Track view
   if (s.id && currentUser) {
     db.ref(`stories/${s.id}/views/${currentUser.uid}`).set(true);
   }
-  // Load view count real-time
   if (s.id) {
     db.ref(`stories/${s.id}/views`).on('value', snap => {
       const count = snap.exists() ? Object.keys(snap.val()).length : 0;
@@ -4283,7 +4102,6 @@ function viewStory(s) {
       if (el2) el2.textContent = count;
     });
   }
-  // Reset reaction buttons
   document.querySelectorAll('.story-react-btn').forEach(b => b.classList.remove('active'));
   if (s.id && currentUser) {
     db.ref(`stories/${s.id}/reactions/${currentUser.uid}`).once('value', snap => {
@@ -4294,7 +4112,6 @@ function viewStory(s) {
       }
     });
   }
-  // Clear reply input
   const ri = document.getElementById('story-reply-input');
   if (ri) ri.value = '';
 }
@@ -4311,7 +4128,6 @@ async function reactToStory(emoji) {
     document.querySelectorAll('.story-react-btn').forEach(b => b.classList.remove('active'));
     const map = {'❤️':'sr-love','👍':'sr-like','😮':'sr-wow','😂':'sr-haha'};
     if (map[emoji]) document.getElementById(map[emoji])?.classList.add('active');
-    // Notify story owner
     if (currentStoryData.authorId && currentStoryData.authorId !== currentUser.uid) {
       addNotification(currentStoryData.authorId, {
         type:'like', actorId:currentUser.uid, actorName:currentUserData.name,
@@ -4359,11 +4175,9 @@ function floatReactionEmoji(emoji, x, y) {
 async function setReaction(postId, emoji, e) {
   const picker = document.getElementById('rp-'+postId);
   picker.classList.remove('show');
-  // Float animation
   if (e) { const r=e.target.getBoundingClientRect(); floatReactionEmoji(emoji, r.left+r.width/2, r.top); }
   await db.ref(`posts/${postId}/reactions/${currentUser.uid}`).set(emoji);
   await db.ref(`posts/${postId}/likes/${currentUser.uid}`).set(true);
-  // Notify
   const snap = await db.ref('posts/'+postId).once('value');
   const post = snap.val();
   if (post.authorId !== currentUser.uid) {
@@ -4377,7 +4191,6 @@ async function setReaction(postId, emoji, e) {
 }
 
 async function toggleLike(postId) {
-  // Optimistic UI update - instant feedback without scroll
   const btn = document.getElementById('like-btn-'+postId);
   const isCurrentlyLiked = btn && btn.classList.contains('liked');
   if (btn) {
@@ -4422,7 +4235,6 @@ async function likeComment(postId, commentId, btn) {
   if (snap.exists()) { await ref.remove(); btn.textContent='Like'; btn.classList.remove('liked'); }
   else { 
     await ref.set(true); btn.textContent='❤️'; btn.classList.add('liked');
-    // Notify comment author
     const cSnap = await db.ref(`posts/${postId}/comments/${commentId}`).once('value');
     const c = cSnap.val();
     if (c && c.authorId !== currentUser.uid) {
@@ -4571,7 +4383,6 @@ async function submitComment() {
   input.dataset.replyTo = '';
   
   if (replyToId) {
-    // Save as a reply under the comment
     const replyData = {
       authorId: currentUser.uid,
       authorName: currentUserData.name,
@@ -4579,7 +4390,6 @@ async function submitComment() {
       text, createdAt: Date.now()
     };
     await db.ref(`posts/${activePostId}/comments/${replyToId}/replies`).push(replyData);
-    // Notify comment author
     const cSnap = await db.ref(`posts/${activePostId}/comments/${replyToId}`).once('value');
     const c = cSnap.val();
     if (c && c.authorId && c.authorId !== currentUser.uid) {
@@ -4614,7 +4424,6 @@ async function submitComment() {
 }
 
 // ===== POST ACTIONS =====
-// ===== GLOBAL POST MENU =====
 let _gpmPostId = null;
 let _gpmAuthorId = null;
 
@@ -4626,13 +4435,11 @@ function showGlobalPostMenu(e, postId, authorId) {
   const menu = document.getElementById('global-post-menu');
   const isOwn = authorId === currentUser.uid;
 
-  // Show/hide items based on ownership
   document.getElementById('gpm-delete').style.display = isOwn ? 'flex' : 'none';
   document.getElementById('gpm-report').style.display = isOwn ? 'none' : 'flex';
   document.getElementById('gpm-report-user').style.display = isOwn ? 'none' : 'flex';
   document.getElementById('gpm-copy').style.display = 'flex';
 
-  // Position: below the button, right-aligned
   const btn = e.currentTarget || e.target;
   const rect = btn.getBoundingClientRect();
   menu.style.display = 'block';
@@ -4646,13 +4453,10 @@ function showGlobalPostMenu(e, postId, authorId) {
   let top = rect.bottom + 8;
   let left = rect.right - menuW;
 
-  // Don't go off bottom
   if (top + menuH > window.innerHeight - 70) {
     top = rect.top - menuH - 8;
   }
-  // Don't go off left
   if (left < 8) left = 8;
-  // Don't go off top
   if (top < 60) top = rect.bottom + 8;
 
   menu.style.top = top + 'px';
@@ -4703,15 +4507,9 @@ document.addEventListener('touchstart', function(e) {
 
 async function deletePost(postId) {
   if (!confirm('এই post মুছে ফেলবেন?')) return;
-
-  // ১. Firebase এ hidden:true সেট করো — সব জায়গা থেকে হাইড হয়ে যাবে
   try {
     await db.ref('posts/' + postId + '/hidden').set(true);
-  } catch(e) {
-    console.error('Delete error:', e);
-  }
-
-  // ২. এই ডিভাইসের UI থেকে সাথে সাথে সরিয়ে দাও
+  } catch(e) { console.error('Delete error:', e); }
   const card = document.getElementById('post-' + postId);
   if (card) {
     card.style.opacity = '0';
@@ -4719,19 +4517,14 @@ async function deletePost(postId) {
     card.style.transition = 'all 0.3s';
     setTimeout(() => card.remove(), 300);
   }
-
-  // ৩. menu বন্ধ করো
   closeAllMenus();
-
   showToast('🗑️ Post মুছে ফেলা হয়েছে');
 }
 
-// ===== HELPER: Suspend user 5 minutes and permanently hide all their posts =====
 async function banUserAndHideAllPosts(uid, reason) {
-  const SUSPEND_DURATION_MS = 5 * 60 * 1000; // 5 minutes
+  const SUSPEND_DURATION_MS = 5 * 60 * 1000;
   const suspendedUntil = Date.now() + SUSPEND_DURATION_MS;
 
-  // Suspend for 5 minutes — posts stay hidden permanently even after unsuspend
   await db.ref('users/'+uid).update({
     status: 'suspended',
     suspendedAt: Date.now(),
@@ -4740,19 +4533,16 @@ async function banUserAndHideAllPosts(uid, reason) {
     postsHiddenPermanently: true
   });
 
-  // Permanently hide ALL posts by this user
   const postsSnap = await db.ref('posts').orderByChild('authorId').equalTo(uid).once('value');
   if (postsSnap.exists()) {
     const updates = {};
     postsSnap.forEach(ch => { updates[ch.key + '/hidden'] = true; });
     await db.ref('posts').update(updates);
-    // Remove all their post cards from current feed UI instantly
     postsSnap.forEach(ch => {
       const card = document.getElementById('post-' + ch.key);
       if (card) { card.style.opacity='0'; card.style.transform='scale(0.95)'; card.style.transition='all 0.3s'; setTimeout(()=>card.remove(), 300); }
     });
   }
-  // Permanently hide their stories too
   const storiesSnap = await db.ref('stories').orderByChild('authorId').equalTo(uid).once('value');
   if (storiesSnap.exists()) {
     const storyUpdates = {};
@@ -4825,58 +4615,48 @@ async function reportPost(postId, reason) {
   const already = await myReport.once('value');
   if (already.exists()) { showToast('আপনি আগেই এই post রিপোর্ট করেছেন'); return; }
 
-  // Check if current reporter is verified
   const reporterIsVerified = !!(currentUserData?.verifiedBadge?.active && currentUserData.verifiedBadge.expiresAt > Date.now());
   await myReport.set({ time: Date.now(), reporterId: currentUser.uid, reporterVerified: reporterIsVerified, reason: reason || 'other' });
 
   const allReports = await reportRef.once('value');
   const count = allReports.exists() ? Object.keys(allReports.val()).length : 0;
 
-  // Count verified reporters among all reporters
   let verifiedReporterCount = 0;
   if (allReports.exists()) {
     allReports.forEach(ch => { if (ch.val().reporterVerified) verifiedReporterCount++; });
   }
 
-  // Get post & author info
   const postSnap = await db.ref('posts/'+postId).once('value');
   const post = postSnap.val();
   const authorId = post?.authorId;
 
   if (authorId) {
-    // 🛡️ MONETIZATION SHIELD: monetized accounts are fully protected from suspension
     const authorSnap = await db.ref('users/'+authorId+'/monetization').once('value');
     const authorMonetization = authorSnap.val();
     if (authorMonetization && authorMonetization.active === true) {
       showToast('রিপোর্ট নথিভুক্ত হয়েছে।');
-      document.getElementById('menu-'+postId)?.classList.remove('show');
       return;
     }
 
-    // RULE: 2 verified reporters → immediate ban + hide all posts
     if (verifiedReporterCount >= 2) {
       await db.ref('posts/'+postId+'/hidden').set(true);
       await banUserAndHideAllPosts(authorId, 'Reported by verified users');
       const postCard = document.getElementById('post-'+postId);
       if (postCard) { postCard.style.opacity='0'; postCard.style.transform='scale(0.95)'; postCard.style.transition='all 0.3s'; setTimeout(()=>postCard.remove(),300); }
       showToast('✅ রিপোর্ট হয়েছে। পোস্ট ও ইউজার হাইড করা হয়েছে।');
-      document.getElementById('menu-'+postId)?.classList.remove('show');
       return;
     }
-    // RULE: 2 total reports → hide post + ban user (any reporters)
     if (count >= 2) {
       await db.ref('posts/'+postId+'/hidden').set(true);
       await banUserAndHideAllPosts(authorId, 'Multiple post reports');
       const postCard = document.getElementById('post-'+postId);
       if (postCard) { postCard.style.opacity='0'; postCard.style.transform='scale(0.95)'; postCard.style.transition='all 0.3s'; setTimeout(()=>postCard.remove(),300); }
       showToast('✅ রিপোর্ট হয়েছে। পোস্ট ও ইউজার হাইড করা হয়েছে।');
-      document.getElementById('menu-'+postId)?.classList.remove('show');
       return;
     }
   }
 
   showToast(`Post রিপোর্ট করা হয়েছে (${count}/2)`);
-  document.getElementById('menu-'+postId)?.classList.remove('show');
 }
 
 async function reportUser(uid, reason) {
@@ -4884,20 +4664,17 @@ async function reportUser(uid, reason) {
   const already = await myReport.once('value');
   if (already.exists()) { showToast('আপনি আগেই এই ইউজারকে রিপোর্ট করেছেন'); return; }
 
-  // Check if current reporter is verified
   const reporterIsVerified = !!(currentUserData?.verifiedBadge?.active && currentUserData.verifiedBadge.expiresAt > Date.now());
   await myReport.set({ time: Date.now(), reporterVerified: reporterIsVerified, reason: reason || 'other' });
 
   const allReports = await db.ref(`reports/users/${uid}`).once('value');
   const count = allReports.exists() ? Object.keys(allReports.val()).length : 0;
 
-  // Count verified reporters
   let verifiedReporterCount = 0;
   if (allReports.exists()) {
     allReports.forEach(ch => { if (ch.val().reporterVerified) verifiedReporterCount++; });
   }
 
-  // 🛡️ MONETIZATION SHIELD: monetized accounts are fully protected from suspension
   const targetMonetSnap = await db.ref('users/'+uid+'/monetization').once('value');
   const targetMonetion = targetMonetSnap.val();
   if (targetMonetion && targetMonetion.active === true) {
@@ -4906,14 +4683,12 @@ async function reportUser(uid, reason) {
     return;
   }
 
-  // RULE: 2 verified reporters → immediate ban + hide all posts
   if (verifiedReporterCount >= 2) {
     await banUserAndHideAllPosts(uid, 'Reported by verified users');
     showToast('✅ রিপোর্ট হয়েছে। ইউজার ও সব পোস্ট হাইড করা হয়েছে।');
     closeModal('view-profile-modal');
     return;
   }
-  // RULE: 2 total reports → ban + hide all posts
   if (count >= 2) {
     await banUserAndHideAllPosts(uid, 'Multiple user reports');
     showToast('✅ রিপোর্ট হয়েছে। ইউজার ও সব পোস্ট হাইড করা হয়েছে।');
@@ -4944,12 +4719,10 @@ function loadFriendRequests() {
   db.ref('friendRequests').orderByChild('to').equalTo(currentUser.uid).on('value', snap => {
     list.innerHTML = '';
     if (!snap.exists()) { list.innerHTML='<div style="padding:12px 16px;color:var(--text-secondary);font-size:14px">No friend requests</div>'; return; }
-    // Deduplicate: only ONE request per sender (latest)
     const senderMap = {};
     snap.forEach(ch => {
       const req = ch.val();
       if (req.status !== 'pending') return;
-      // Keep only newest per sender
       if (!senderMap[req.from] || ch.val().createdAt > senderMap[req.from].createdAt) {
         senderMap[req.from] = { ...req, key: ch.key };
       }
@@ -4980,13 +4753,12 @@ function loadFriendRequests() {
   });
 }
 
-// ===== PEOPLE / FRIENDS PAGE - module-level realtime =====
 let _fpInit = false;
 let _fpFriends = {};
 let _fpSentReqs = {};
 let _fpIgnored = {};
 let _fpUsers = {};
-let _fpAllFriends = {}; // পুরো friends graph: { uid: { friendUid: true, ... }, ... } — mutual friend গণনার জন্য
+let _fpAllFriends = {};
 
 function _fpMutualCount(uid) {
   const theirFriends = _fpAllFriends[uid];
@@ -5001,13 +4773,11 @@ function _fpMutualCount(uid) {
 function _fpRender() {
   const grid = document.getElementById('people-grid');
   if (!grid) return;
-  // সব user দেখাবে — শুধু already friends বাদ দিয়ে। Sent request থাকলেও list এ থাকবে।
   const entries = Object.entries(_fpUsers).filter(([uid]) => !_fpFriends[uid]);
   if (entries.length === 0) {
     grid.innerHTML = '<div style="padding:40px 16px;text-align:center;color:var(--text-secondary)"><i class="fas fa-user-group" style="font-size:44px;opacity:0.2;display:block;margin-bottom:12px"></i><p style="font-size:14px">এই মুহূর্তে কোনো নতুন suggestion নেই</p></div>';
     return;
   }
-  // Sort: mutual friend বেশি আগে, ignored সবার নিচে, বাকিরা নাম অনুযায়ী
   entries.sort(([aUid,aU],[bUid,bU]) => {
     const aIgnored = !!_fpIgnored[aUid], bIgnored = !!_fpIgnored[bUid];
     if (aIgnored !== bIgnored) return aIgnored ? 1 : -1;
@@ -5084,7 +4854,6 @@ function loadPeopleYouMayKnow() {
   const grid = document.getElementById('people-grid');
   if (!grid) return;
 
-  // Skeleton দেখাও
   grid.innerHTML = [1,2,3,4].map(()=>`
     <div class="friend-card" style="pointer-events:none">
       <div style="width:60px;height:60px;border-radius:50%;background:var(--border);flex-shrink:0;opacity:0.6"></div>
@@ -5096,7 +4865,6 @@ function loadPeopleYouMayKnow() {
     </div>`).join('');
 
   if (_fpInit) {
-    // listener আগে থেকেই চলছে
     if (Object.keys(_fpUsers).length > 0) _fpRender();
     return;
   }
@@ -5146,7 +4914,6 @@ async function sendFriendReqFromPeople(toUid) {
     btn.style.opacity = '0.7';
   }
   await sendFriendReqSafe(toUid);
-  // Realtime listener will update the grid automatically
 }
 
 async function ignoreOrRestoreUser(uid, isCurrentlyIgnored) {
@@ -5156,17 +4923,6 @@ async function ignoreOrRestoreUser(uid, isCurrentlyIgnored) {
   } else {
     await db.ref(`ignoredUsers/${currentUser.uid}/${uid}`).set(true);
     showToast('ইউজার ignore করা হয়েছে');
-  }
-  // Realtime listener will auto-update the grid
-}
-
-async function checkFriendStatus(uid, btn) {
-  const snap = await db.ref(`friends/${currentUser.uid}/${uid}`).once('value');
-  if (snap.exists()) { btn.className='btn-add-friend friends'; btn.innerHTML='<i class="fas fa-user-check"></i> Friends'; return; }
-  // Check pending
-  const reqSnap = await db.ref('friendRequests').orderByChild('from').equalTo(currentUser.uid).once('value');
-  if (reqSnap.exists()) {
-    reqSnap.forEach(ch=>{ if(ch.val().to===uid&&ch.val().status==='pending') { btn.className='btn-add-friend sent'; btn.innerHTML='<i class="fas fa-clock"></i> Sent'; }});
   }
 }
 
@@ -5233,11 +4989,9 @@ async function renderProfile(uid, isOwn, container) {
   const friendSnap = await db.ref(`friends/${currentUser.uid}/${uid}`).once('value');
   const isFriend = friendSnap.exists();
 
-  // Count friends
   const allFriendsSnap = await db.ref(`friends/${uid}`).once('value');
   const friendCount = allFriendsSnap.exists() ? Object.keys(allFriendsSnap.val()).length : 0;
 
-  // Count sent/received requests — permission error হলেও প্রোফাইল দেখাবে
   let sentCount = 0, receivedCount = 0;
   if (isOwn) {
     try {
@@ -5247,7 +5001,7 @@ async function renderProfile(uid, isOwn, container) {
       ]);
       if (sentSnap.exists()) sentSnap.forEach(ch => { if(ch.val().status==='pending') sentCount++; });
       if (receivedSnap.exists()) receivedSnap.forEach(ch => { if(ch.val().status==='pending') receivedCount++; });
-    } catch(e) { /* Firebase permission denied — skip counts */ }
+    } catch(e) { /* skip */ }
   }
 
   const isVerified = u.verifiedBadge && u.verifiedBadge.active && u.verifiedBadge.expiresAt > Date.now();
@@ -5316,7 +5070,6 @@ async function loadProfilePosts(uid) {
   const container = document.getElementById('profile-tab-content-'+uid);
   if (!container) return;
   container.innerHTML = '<div class="spinner"></div>';
-  // Use userPosts index for proper real-time profile timeline
   db.ref('posts').orderByChild('authorId').equalTo(uid).on('value', snap => {
     container.innerHTML = '';
     if (!snap.exists()) { container.innerHTML='<div class="empty-state"><i class="fas fa-newspaper"></i><h3>No posts yet</h3></div>'; return; }
@@ -5360,7 +5113,6 @@ async function loadProfileFriends(uid) {
   const grid = document.createElement('div');
   grid.className='friend-grid';
   container.appendChild(grid);
-  // Load all friends
   const promises = [];
   snap.forEach(ch => {
     promises.push(
@@ -5392,7 +5144,6 @@ async function unfriend(uid) {
   showToast('Friend remove করা হয়েছে');
 }
 
-// Profile photo change
 function changeProfilePhoto() { createFileInputFor('profile'); }
 function changeCoverPhoto() { createFileInputFor('cover'); }
 
@@ -5428,18 +5179,15 @@ function createFileInputFor(type) {
 
 // ===== NOTIFICATIONS =====
 function addNotification(uid, data) {
-  db.ref('notifications/'+uid).push(data).catch(() => { /* notification ব্যর্থ হলে মূল ফিচার আটকাবে না */ });
+  db.ref('notifications/'+uid).push(data).catch(() => {});
 }
 
 function listenNotifications() {
-  // Listen for unread count - real-time badge update
   db.ref('notifications/'+currentUser.uid).on('value', snap => {
     let count = 0;
     if (snap.exists()) snap.forEach(ch => { if (!ch.val().read) count++; });
     const badge = document.getElementById('notif-badge');
     if (badge) { if (count > 0) { badge.style.display='flex'; badge.textContent=count>9?'9+':count; } else badge.style.display='none'; }
-    
-    // Real-time re-render if on notifications page
     if (currentPage === 'notifications') renderNotifications(snap);
   });
 }
@@ -5452,7 +5200,6 @@ function renderNotifications(snap) {
     list.innerHTML='<div class="empty-state"><i class="fas fa-bell-slash"></i><h3>কোনো নোটিফিকেশন নেই</h3><p>Like, comment বা friend request এলে এখানে আসবে</p></div>'; 
     return; 
   }
-  // Collect ALL and sort newest first — never delete
   const notifs = [];
   snap.forEach(ch => notifs.push({id:ch.key, ...ch.val()}));
   notifs.sort((a,b) => (b.createdAt||0) - (a.createdAt||0));
@@ -5495,7 +5242,6 @@ function renderNotifications(snap) {
 }
 
 function markNotifsRead() {
-  // Mark all as read when page opened
   db.ref('notifications/'+currentUser.uid).once('value', snap => {
     if (!snap.exists()) return;
     const updates = {};
@@ -5583,26 +5329,31 @@ function handleSearch(q) {
   const results = document.getElementById('search-results');
   if (!q || q.trim().length < 1) { results.style.display='none'; results.innerHTML=''; return; }
   const query = q.trim().toLowerCase();
-  db.ref('users').once('value', snap => {
-    results.innerHTML='';
-    let found=0;
-    snap.forEach(ch=>{
-      const u=ch.val();
-      if (u && u.name && u.name.toLowerCase().includes(query)) {
-        found++;
-        const item=document.createElement('div');
-        item.className='search-result-item';
-        const isVer = u.verifiedBadge && u.verifiedBadge.active && u.verifiedBadge.expiresAt > Date.now();
-        item.innerHTML=`<img src="${u.avatar||DEFAULT_AVATAR}" alt=""><span>${esc(u.name)}${isVer?getVerifiedBadgeHTML(true):''}${isUserMonetized(u)?getCreatorBadgeHTML(true):''}</span>`;
-        item.onclick=()=>{ closeSearchBar(); viewUserProfile(ch.key); };
-        results.appendChild(item);
+
+  // Debounce
+  if (_searchTimeout) clearTimeout(_searchTimeout);
+  _searchTimeout = setTimeout(() => {
+    db.ref('users').once('value', snap => {
+      results.innerHTML='';
+      let found=0;
+      snap.forEach(ch=>{
+        const u=ch.val();
+        if (u && u.name && u.name.toLowerCase().includes(query)) {
+          found++;
+          const item=document.createElement('div');
+          item.className='search-result-item';
+          const isVer = u.verifiedBadge && u.verifiedBadge.active && u.verifiedBadge.expiresAt > Date.now();
+          item.innerHTML=`<img src="${u.avatar||DEFAULT_AVATAR}" alt=""><span>${esc(u.name)}${isVer?getVerifiedBadgeHTML(true):''}${isUserMonetized(u)?getCreatorBadgeHTML(true):''}</span>`;
+          item.onclick=()=>{ closeSearchBar(); viewUserProfile(ch.key); };
+          results.appendChild(item);
+        }
+      });
+      if (found===0) {
+        results.innerHTML='<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:14px"><i class="fas fa-search" style="display:block;font-size:28px;margin-bottom:8px;opacity:0.3"></i>"'+esc(q)+'" পাওয়া যায়নি</div>';
       }
+      results.style.display='block';
     });
-    if (found===0) {
-      results.innerHTML='<div style="padding:20px;text-align:center;color:var(--text-secondary);font-size:14px"><i class="fas fa-search" style="display:block;font-size:28px;margin-bottom:8px;opacity:0.3"></i>"'+esc(q)+'" পাওয়া যায়নি</div>';
-    }
-    results.style.display='block';
-  });
+  }, 300);
 }
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSearchBar(); });
 
@@ -5642,7 +5393,6 @@ function getChatId(uid1, uid2) {
 }
 
 async function openChat(peerUid) {
-  // Verify they are friends
   const friendSnap = await db.ref(`friends/${currentUser.uid}/${peerUid}`).once('value');
   if (!friendSnap.exists()) { showToast('শুধু বন্ধুদের সাথে মেসেজ করা যাবে'); return; }
 
@@ -5654,7 +5404,6 @@ async function openChat(peerUid) {
   document.getElementById('chat-peer-avatar').src = currentChatPeerData.avatar || DEFAULT_AVATAR;
   document.getElementById('chat-peer-name').textContent = currentChatPeerData.name;
   document.getElementById('chat-peer-status').textContent = '';
-  // Show online status in chat header
   const avatarEl = document.getElementById('chat-peer-avatar');
   avatarEl.style.position = 'relative';
   const chatHeader = document.getElementById('chat-header');
@@ -5668,7 +5417,6 @@ async function openChat(peerUid) {
     avatarWrap.appendChild(chatOnlineDot);
   }
   listenUserOnline(peerUid, chatOnlineDot);
-  // Also update status text
   db.ref('presence/'+peerUid).on('value', snap => {
     const statusEl = document.getElementById('chat-peer-status');
     if (!statusEl) return;
@@ -5682,7 +5430,6 @@ async function openChat(peerUid) {
   closeModal('view-profile-modal');
   showPage('chat');
   
-  // Load messages real-time
   if (chatListener) chatListener.off();
   const chatId = getChatId(currentUser.uid, peerUid);
   chatListener = db.ref('messages/'+chatId).orderByChild('createdAt').limitToLast(60);
@@ -5699,7 +5446,6 @@ async function openChat(peerUid) {
       const m = ch.val();
       const isMe = m.senderId === currentUser.uid;
 
-      // Date divider
       const msgDate = new Date(m.createdAt);
       const dateStr = msgDate.toLocaleDateString('bn-BD', {day:'numeric', month:'long', year:'numeric'});
       if (dateStr !== lastDateStr) {
@@ -5730,9 +5476,7 @@ async function openChat(peerUid) {
       `;
       container.appendChild(wrap);
     });
-    // Scroll to bottom smoothly
     container.scrollTop = container.scrollHeight;
-    // Mark as read
     const chatId2 = getChatId(currentUser.uid, peerUid);
     db.ref(`conversations/${currentUser.uid}/${peerUid}/unread`).set(0);
   });
@@ -5758,7 +5502,6 @@ async function sendMessage(text, storyReply) {
   
   await db.ref('messages/'+chatId).push(msgData);
   
-  // Update conversation index for both users
   const convData = {
     peerId: peerId,
     peerName: currentChatPeerData?.name||'',
@@ -5775,15 +5518,13 @@ async function sendMessage(text, storyReply) {
     peerAvatar: currentUserData.avatar||DEFAULT_AVATAR,
     lastMsg: msgText,
     lastTime: Date.now(),
-    unread: firebase.database.ServerValue.increment ? 1 : 1
+    unread: 1
   };
-  // increment unread for receiver
   const peerConvSnap = await db.ref(`conversations/${peerId}/${currentUser.uid}/unread`).once('value');
   const currentUnread = peerConvSnap.val() || 0;
   myData.unread = currentUnread + 1;
   await db.ref(`conversations/${peerId}/${currentUser.uid}`).update(myData);
   
-  // Send notification
   addNotification(peerId, {
     type:'message', actorId:currentUser.uid, actorName:currentUserData.name,
     actorAvatar:currentUserData.avatar||DEFAULT_AVATAR,
@@ -5792,7 +5533,6 @@ async function sendMessage(text, storyReply) {
   });
 }
 
-// Large emoji list for chat and comments
 const EMOJI_LIST = ['😀','😃','😄','😁','😆','😅','🤣','😂','🙂','🙃','😉','😊','😇','🥰','😍','🤩','😘','😗','😚','😙','🥲','😋','😛','😜','🤪','😝','🤑','🤗','🤭','🤫','🤔','🤐','🤨','😐','😑','😶','😏','😒','🙄','😬','🤥','😌','😔','😪','🤤','😴','😷','🤒','🤕','🤢','🤮','🤧','🥵','🥶','🥴','😵','🤯','🤠','🥳','🥸','😎','🤓','🧐','😕','😟','🙁','☹️','😮','😯','😲','😳','🥺','😦','😧','😨','😰','😥','😢','😭','😱','😖','😣','😞','😓','😩','😫','🥱','😤','😡','😠','🤬','😈','👿','💀','☠️','💩','🤡','👹','👺','👻','👽','👾','🤖','😺','😸','😹','😻','😼','😽','🙀','😿','😾','👋','🤚','🖐','✋','🖖','👌','🤌','🤏','✌️','🤞','🤟','🤘','🤙','👈','👉','👆','🖕','👇','☝️','👍','👎','✊','👊','🤛','🤜','👏','🙌','👐','🤲','🙏','✍️','💅','🤳','💪','🦾','🦿','🦵','🦶','👂','🦻','👃','🫀','🫁','🧠','🦷','🦴','👀','👁','👅','👄','💋','🫦','❤️','🧡','💛','💚','💙','💜','🖤','🤍','🤎','💔','❤️‍🔥','❤️‍🩹','❣️','💕','💞','💓','💗','💖','💘','💝','💟','☮️','✝️','☪️','🕉','☸️','✡️','🔯','🕎','☯️','☦️','🛐','⛎','♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓','🆔','⚛️','🉑','☢️','☣️','📴','📳','🈶','🈚','🈸','🈺','🈷️','✴️','🆚','💮','🉐','㊙️','㊗️','🈴','🈵','🈹','🈲','🅰️','🅱️','🆎','🆑','🅾️','🆘','❌','⭕','🛑','⛔','📛','🚫','💯','💢','♨️','🚷','🚯','🚳','🚱','🔞','📵','🔕','🎵','🎶','💤','🔆','🔅','🔔','🔕','📢','📣','💬','💭','🗯','♟','🃏','🀄','🎴','🎭','🎨','🎬','🎤','🎧','🎼','🎹','🥁','🎷','🎺','🎸','🪕','🎻','🎲','♟','🎯','🎳','🎮','🎰','🧩'];
 
 function filterMessagesList(q) {
@@ -5807,9 +5547,7 @@ function loadMessagesList() {
   const container = document.getElementById('messages-list-container');
   container.innerHTML = '<div class="spinner"></div>';
   
-  // Load friends first, then show conversations + friend list
   db.ref(`friends/${currentUser.uid}`).on('value', async friendsSnap => {
-    // Also listen to conversations
     db.ref(`conversations/${currentUser.uid}`).on('value', async convsSnap => {
       container.innerHTML = '';
       
@@ -5824,7 +5562,6 @@ function loadMessagesList() {
         return;
       }
       
-      // Build list: friends with conversations first (sorted by lastTime), then rest
       const withConv = [];
       const withoutConv = [];
       for (const fid of Object.keys(friends)) {
@@ -5835,7 +5572,6 @@ function loadMessagesList() {
       
       const allEntries = [...withConv, ...withoutConv];
       
-      // Fetch user data for those without conversation
       const userFetches = {};
       for (const entry of allEntries) {
         if (!entry.conv) {
@@ -5886,7 +5622,6 @@ function listenMessageBadge() {
   db.ref(`conversations/${currentUser.uid}`).on('value', snap => {
     let totalUnread = 0;
     if (snap.exists()) snap.forEach(ch => { totalUnread += (ch.val().unread||0); });
-    // Navbar message badge
     const navBadge = document.getElementById('msg-badge-nav');
     if (navBadge) {
       if (totalUnread > 0) { navBadge.style.display='flex'; navBadge.textContent=totalUnread>9?'9+':totalUnread; }
@@ -5895,7 +5630,6 @@ function listenMessageBadge() {
   });
 }
 
-// Chat emoji panel
 function toggleChatEmojiPanel() {
   const panel = document.getElementById('chat-emoji-panel');
   const isShown = panel.classList.contains('show');
@@ -5919,7 +5653,6 @@ function toggleChatEmojiPanel() {
   }
 }
 
-// Hide chat emoji panel when clicking outside
 document.addEventListener('click', e => {
   const panel = document.getElementById('chat-emoji-panel');
   if (panel && !e.target.closest('.chat-input-emoji-btn') && !e.target.closest('#chat-emoji-panel')) {
@@ -5935,14 +5668,11 @@ async function sendStoryReply() {
   if (!text) return;
   input.value = '';
   
-  // The reply goes as a message to story author
   const authorId = currentStoryData.authorId;
   if (authorId === currentUser.uid) { showToast('নিজের story-তে reply করা যাবে না'); return; }
   
-  // Check friendship
   const friendSnap = await db.ref(`friends/${currentUser.uid}/${authorId}`).once('value');
   
-  // Save current peer data temporarily
   const prevPeerId = currentChatPeerId;
   const prevPeerData = currentChatPeerData;
   
@@ -5953,16 +5683,11 @@ async function sendStoryReply() {
   const storyReply = { imageUrl: currentStoryData.imageUrl||'', storyId: currentStoryData.id };
   await sendMessage(text, storyReply);
   
-  // Restore if needed
-  if (!friendSnap.exists()) {
-    // Still allow reply even if not friends (one-way message for story)
-  }
-  
   showToast('✅ Reply পাঠানো হয়েছে!');
   closeStoryViewer();
 }
 
-// ===== STORY INFO (viewers + reactions) =====
+// ===== STORY INFO =====
 function toggleStoryInfoPanel() {
   const panel = document.getElementById('story-info-panel');
   if (!currentStoryData) return;
@@ -6011,7 +5736,6 @@ function setOnlinePresence() {
   const ref = db.ref('presence/'+currentUser.uid);
   ref.set({ online: true, lastSeen: Date.now() });
   ref.onDisconnect().set({ online: false, lastSeen: Date.now() });
-  // Keep alive ping every 30 seconds
   setInterval(() => {
     if (currentUser) db.ref('presence/'+currentUser.uid+'/lastSeen').set(Date.now());
   }, 30000);
@@ -6019,7 +5743,6 @@ function setOnlinePresence() {
 
 function listenUserOnline(uid, dotElement) {
   if (!dotElement) return;
-  // Avoid duplicate listeners
   if (onlineListeners[uid]) onlineListeners[uid].off();
   const ref = db.ref('presence/'+uid);
   onlineListeners[uid] = ref;
@@ -6031,47 +5754,21 @@ function listenUserOnline(uid, dotElement) {
   });
 }
 
-// Attach online dot to an avatar container
-function attachOnlineDot(container, uid, size) {
-  container.style.position = 'relative';
-  let dot = container.querySelector('.online-dot');
-  if (!dot) {
-    dot = document.createElement('div');
-    dot.className = 'online-dot' + (size ? ' '+size : '');
-    container.appendChild(dot);
-  }
-  listenUserOnline(uid, dot);
-  return dot;
-}
-
 // ===== INIT =====
 
-// ===== HOME BUTTON SCROLL TO TOP =====
 function homeButtonClick() {
   if (currentPage === 'home') {
-    // Smooth scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     showPage('home');
   }
 }
 
-// ===== AI-STYLE IMAGE MODERATION (heuristic) =====
-// Since we cannot use an AI API here, we flag images via reporting system
-// Images with many reports get auto-hidden
-function checkAutoHidePost(postId, reportCount) {
-  if (reportCount >= 3) {
-    db.ref('posts/' + postId + '/hidden').set(true);
-  }
-}
-
-// ===== FRIEND REQUEST DEDUPLICATION - ensure only one pending req per pair =====
+// ===== FRIEND REQUEST DEDUPLICATION =====
 async function sendFriendReqSafe(toUid) {
   try {
     let alreadySent = false;
 
-    // Duplicate check (নিজের পাঠানো request আগে আছে কিনা) — এই check ব্যর্থ হলেও
-    // মূল request পাঠানো বন্ধ হবে না, যাতে permission/index সমস্যায় পুরো ফিচার আটকে না যায়
     try {
       const existingSnap = await db.ref('friendRequests')
         .orderByChild('from').equalTo(currentUser.uid).once('value');
@@ -6080,11 +5777,10 @@ async function sendFriendReqSafe(toUid) {
           if (ch.val().to === toUid && ch.val().status === 'pending') alreadySent = true;
         });
       }
-    } catch(e) { /* duplicate-check read failed — ignore, proceed anyway */ }
+    } catch(e) { /* ignore */ }
 
     if (alreadySent) { showToast('Friend request ইতিমধ্যে পাঠানো হয়েছে'); return; }
 
-    // Reverse check (তারা আগেই পাঠিয়েছে কিনা)
     try {
       const reverseSnap = await db.ref('friendRequests')
         .orderByChild('from').equalTo(toUid).once('value');
@@ -6093,7 +5789,7 @@ async function sendFriendReqSafe(toUid) {
           if (ch.val().to === currentUser.uid && ch.val().status === 'pending') alreadySent = true;
         });
       }
-    } catch(e) { /* reverse-check read failed — ignore, proceed anyway */ }
+    } catch(e) { /* ignore */ }
 
     if (alreadySent) { showToast('তারা আগেই আপনাকে request পাঠিয়েছে'); return; }
 
@@ -6103,10 +5799,8 @@ async function sendFriendReqSafe(toUid) {
   }
 }
 
-// ===== LISTEN FRIEND REQUEST COUNT =====
 function listenFriendRequestBadge() {
   db.ref('friendRequests').orderByChild('to').equalTo(currentUser.uid).on('value', snap => {
-    // Deduplicate by sender
     const senders = new Set();
     if (snap.exists()) snap.forEach(ch => { if (ch.val().status === 'pending') senders.add(ch.val().from); });
     const count = senders.size;
@@ -6120,7 +5814,7 @@ function listenFriendRequestBadge() {
   });
 }
 
-// ===== DASHBOARD (Settings) =====
+// ===== DASHBOARD =====
 function openDashboard() {
   const modal = document.getElementById('dashboard-modal');
   modal.classList.add('active');
@@ -6131,7 +5825,6 @@ async function loadDashboardData() {
   const container = document.getElementById('dashboard-content');
   container.innerHTML = '<div class="spinner"></div>';
   
-  // Get all user posts
   db.ref('posts').orderByChild('authorId').equalTo(currentUser.uid).on('value', snap => {
     container.innerHTML = '';
     if (!snap.exists()) {
@@ -6257,7 +5950,6 @@ function loadMessageRequests() {
 
 async function acceptMsgRequest(fromUid) {
   await db.ref(`messageRequests/${currentUser.uid}/${fromUid}/status`).set('accepted');
-  // Move to chat list - open chat
   closeModal('msg-requests-modal');
   await openChat(fromUid);
 }
@@ -6272,16 +5964,9 @@ function incrementPostView(postId) {
   db.ref(`posts/${postId}/views`).transaction(v => (v || 0) + 1);
 }
 
-// ===== MY STORY FIRST IN ROW =====
-// This is handled in loadStories override below
-
-// ===== NOTIFICATIONS FOR ALL USERS =====
-// Already handled by addNotification - it sends to any uid
-
-
 // ===== MONETIZATION SYSTEM =====
 const MONETIZE_FRIEND_REQUIREMENT = 5;
-const MONETIZE_OFFER_FRIEND_REQUIREMENT = 5; // 24hr offer: only 5 friends needed
+const MONETIZE_OFFER_FRIEND_REQUIREMENT = 5;
 const MONETIZE_RATES = [
   { views: 100,  earn: 1  },
   { views: 500,  earn: 5  },
@@ -6291,14 +5976,9 @@ const MONETIZE_RATES = [
 ];
 
 function calcEarning(views) {
-  // Proportional: 1 taka per 100 views
   return Math.floor(views / 100);
 }
 
-// ===== OFFER SYSTEM =====
-// Offer starts when admin sets it in Firebase: offers/monetize_offer/startAt (timestamp)
-// Offer lasts 24 hours. During offer, only 5 friends needed.
-// After offer, 50 friends needed again. Users who claimed during offer keep monetization permanently.
 let offerCountdownInterval = null;
 
 async function getMonetizeOfferStatus() {
@@ -6337,11 +6017,12 @@ function renderOfferCountdown(endAt, containerId) {
   offerCountdownInterval = setInterval(update, 1000);
 }
 
-// Admin helper: Start offer now (call from console: startMonetizeOffer())
 async function startMonetizeOffer() {
   await db.ref('offers/monetize_offer').set({ startAt: Date.now() });
   showToast('🎉 24hr Offer চালু হয়েছে!');
 }
+
+let _monetizationCache = null;
 
 async function openMonetizationModal() {
   document.getElementById('monetization-modal').classList.add('active');
@@ -6352,21 +6033,23 @@ async function loadMonetizationContent() {
   const container = document.getElementById('monetization-content');
   container.innerHTML = '<div style="text-align:center;padding:40px 0"><div class="spinner"></div></div>';
 
-  // Get friend count
+  // Use cache if fresh (less than 5 sec)
+  if (_monetizationCache && (Date.now() - _monetizationCache.timestamp < 5000)) {
+    container.innerHTML = _monetizationCache.html;
+    return;
+  }
+
   const friendsSnap = await db.ref('friends/' + currentUser.uid).once('value');
   const friendCount = friendsSnap.exists() ? Object.keys(friendsSnap.val()).length : 0;
 
-  // Get monetization status
   const monetizeSnap = await db.ref('users/' + currentUser.uid + '/monetization').once('value');
   const monetizeData = monetizeSnap.val();
   const isMonetized = !!(monetizeData && monetizeData.active);
 
-  // Get offer status
   const offerStatus = await getMonetizeOfferStatus();
   const isOfferActive = offerStatus.active;
   const effectiveReq = isOfferActive ? MONETIZE_OFFER_FRIEND_REQUIREMENT : MONETIZE_FRIEND_REQUIREMENT;
 
-  // Get user posts with views
   const postsSnap = await db.ref('posts').orderByChild('authorId').equalTo(currentUser.uid).once('value');
   let posts = [];
   let totalViews = 0;
@@ -6391,9 +6074,6 @@ async function loadMonetizationContent() {
   let html = '';
 
   if (!isMonetized) {
-    // ---- NOT YET MONETIZED ----
-
-    // Show offer banner if active
     if (isOfferActive) {
       html += `
       <div class="monetize-offer-banner" onclick="document.getElementById('monetize-claim-btn')?.scrollIntoView({behavior:'smooth'})">
@@ -6489,7 +6169,6 @@ async function loadMonetizationContent() {
     </button>`}
     `;
   } else {
-    // ---- MONETIZED USER ----
     html += `
     <div class="monetize-hero" style="background:linear-gradient(135deg,#10b981 0%,#059669 50%,#047857 100%)">
       <span class="monetize-hero-badge">🏆</span>
@@ -6588,10 +6267,11 @@ async function loadMonetizationContent() {
 
   container.innerHTML = html;
 
-  // Start offer countdown if active
   if (isOfferActive && !isMonetized) {
     renderOfferCountdown(offerStatus.endAt, 'offer-cd');
   }
+
+  _monetizationCache = { html, timestamp: Date.now() };
 }
 
 async function claimMonetization() {
@@ -6600,11 +6280,9 @@ async function claimMonetization() {
   btn.disabled = true;
   btn.innerHTML = '<div class="spinner" style="width:20px;height:20px;margin:0;border-width:2px"></div>';
 
-  // Get offer status
   const offerStatus = await getMonetizeOfferStatus();
   const effectiveReq = offerStatus.active ? MONETIZE_OFFER_FRIEND_REQUIREMENT : MONETIZE_FRIEND_REQUIREMENT;
 
-  // Verify friend count again
   const friendsSnap = await db.ref('friends/' + currentUser.uid).once('value');
   const friendCount = friendsSnap.exists() ? Object.keys(friendsSnap.val()).length : 0;
   if (friendCount < effectiveReq) {
@@ -6619,12 +6297,13 @@ async function claimMonetization() {
     claimedAt: Date.now(),
     friendsAtClaim: friendCount,
     claimedViaOffer: offerStatus.active,
-    permanent: true  // Always permanent once claimed
+    permanent: true
   };
   await db.ref('users/' + currentUser.uid + '/monetization').set(monetizeData);
   currentUserData.monetization = monetizeData;
   updateMonetizeUI();
   showToast('🎉 Congratulations! Monetization চালু হয়েছে! Creator Badge পেয়েছেন!');
+  _monetizationCache = null;
   await loadMonetizationContent();
 }
 
@@ -6642,14 +6321,12 @@ function updateMonetizeUI() {
 }
 
 // ===== ZOOM PREVENTION =====
-// Pinch zoom বন্ধ করো
 document.addEventListener('touchmove', function(e) {
   if (e.touches && e.touches.length > 1) {
     e.preventDefault();
   }
 }, { passive: false });
 
-// Double-tap zoom বন্ধ করো
 let lastTouchEnd = 0;
 document.addEventListener('touchend', function(e) {
   const now = Date.now();
@@ -6659,21 +6336,19 @@ document.addEventListener('touchend', function(e) {
   lastTouchEnd = now;
 }, { passive: false });
 
-// Ctrl+Scroll zoom বন্ধ করো (desktop)
 document.addEventListener('wheel', function(e) {
   if (e.ctrlKey) {
     e.preventDefault();
   }
 }, { passive: false });
 
-// Keyboard zoom বন্ধ করো (Ctrl+/-, Ctrl+0)
 document.addEventListener('keydown', function(e) {
   if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
     e.preventDefault();
   }
 });
 
-// ===== SUSPEND COUNTDOWN: auto-unsuspend after 5 min, posts stay hidden =====
+// ===== SUSPEND COUNTDOWN =====
 let _suspendTimerInterval = null;
 
 function startSuspendCountdown(suspendedUntil, uid) {
@@ -6691,10 +6366,8 @@ function startSuspendCountdown(suspendedUntil, uid) {
     const remaining = suspendedUntil - Date.now();
     if (remaining <= 0) {
       clearInterval(_suspendTimerInterval);
-      // Auto-unsuspend: update Firebase then reload to log user back in
       db.ref('users/'+uid).update({ status: 'active', suspendedUntil: null, suspendReason: null })
         .then(() => {
-          // Account restored — posts remain hidden (postsHiddenPermanently stays true)
           if (wrapEl) wrapEl.style.display = 'none';
           if (msgEl) msgEl.textContent = '✅ সাসপেন্ড শেষ! পুনরায় লগইন করুন।';
           setTimeout(() => window.location.reload(), 1500);
@@ -6712,7 +6385,6 @@ function startSuspendCountdown(suspendedUntil, uid) {
   _suspendTimerInterval = setInterval(tick, 1000);
 }
 
-
 // ===== ACCOUNT SECURITY =====
 let _secPassVisible = false;
 let _secPassActual = '';
@@ -6722,7 +6394,6 @@ async function openAccountSecurity() {
   overlay.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 
-  // Reset password visibility
   _secPassVisible = false;
   const passVal = document.getElementById('sec-pass-val');
   const passNote = document.getElementById('sec-pass-note');
@@ -6731,7 +6402,6 @@ async function openAccountSecurity() {
   if (passNote) passNote.style.display = 'none';
   if (eyeBtn) eyeBtn.innerHTML = '<i class="fas fa-eye"></i>';
 
-  // Load from Firebase
   const emailEl = document.getElementById('sec-email-val');
   if (emailEl) emailEl.textContent = 'লোড হচ্ছে...';
   if (passVal) { passVal.textContent = '••••••••'; passVal.style.letterSpacing = '3px'; }
@@ -6739,13 +6409,9 @@ async function openAccountSecurity() {
   try {
     const snap = await db.ref('users/' + currentUser.uid).once('value');
     const data = snap.val();
-
-    // Email
     const email = data?.email || currentUser?.email || 'পাওয়া যায়নি';
     const phone = data?.phone || '';
     if (emailEl) emailEl.textContent = email || (phone ? phone + ' (Phone)' : 'পাওয়া যায়নি');
-
-    // Password
     _secPassActual = data?.accountPassword || '';
     if (passVal) {
       if (_secPassActual) {
@@ -6810,72 +6476,5 @@ function copySecInfo(type) {
 loadConfig();
 </script>
 
-<!-- ACCOUNT SECURITY MODAL -->
-<div id="account-security-overlay" style="display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:20px" onclick="closeAccountSecurity(event)">
-  <div style="background:var(--card);border-radius:20px;width:100%;max-width:400px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:fadeInScale 0.3s cubic-bezier(0.22,1,0.36,1)">
-    <!-- Header -->
-    <div style="background:linear-gradient(135deg,#10b981 0%,#059669 100%);padding:24px 20px 20px;position:relative;text-align:center">
-      <div style="width:60px;height:60px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px">🛡️</div>
-      <div style="color:#fff;font-size:20px;font-weight:800">একাউন্ট সিকিউরিটি</div>
-      <div style="color:rgba(255,255,255,0.8);font-size:13px;margin-top:4px">আপনার লগইন তথ্য</div>
-      <button onclick="closeAccountSecurityBtn()" style="position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:16px;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer">✕</button>
-    </div>
-
-    <!-- Body -->
-    <div style="padding:20px">
-
-      <!-- Warning banner -->
-      <div style="background:#fff8e1;border:1px solid #fcd34d;border-radius:12px;padding:12px 14px;margin-bottom:18px;display:flex;align-items:flex-start;gap:10px">
-        <span style="font-size:18px">⚠️</span>
-        <div style="font-size:12px;color:#92400e;font-weight:600;line-height:1.5">এই তথ্য গোপন রাখুন। কাউকে শেয়ার করবেন না।</div>
-      </div>
-
-      <!-- Gmail -->
-      <div style="margin-bottom:14px">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px">
-          <i class="fas fa-envelope" style="color:#10b981;margin-right:5px"></i>Gmail / Email
-        </div>
-        <div style="position:relative">
-          <div id="sec-email-display" style="background:var(--hover);border:1.5px solid var(--border);border-radius:12px;padding:14px 48px 14px 16px;font-size:15px;font-weight:600;color:var(--text);word-break:break-all;min-height:48px;display:flex;align-items:center">
-            <span id="sec-email-val">লোড হচ্ছে...</span>
-          </div>
-          <button onclick="copySecInfo('email')" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:8px;background:var(--primary-light);color:var(--primary);font-size:13px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center">
-            <i class="fas fa-copy"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Password -->
-      <div style="margin-bottom:20px">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:8px">
-          <i class="fas fa-lock" style="color:#10b981;margin-right:5px"></i>পাসওয়ার্ড
-        </div>
-        <div style="position:relative">
-          <div id="sec-pass-display" style="background:var(--hover);border:1.5px solid var(--border);border-radius:12px;padding:14px 80px 14px 16px;font-size:15px;font-weight:600;color:var(--text);min-height:48px;display:flex;align-items:center">
-            <span id="sec-pass-val" style="letter-spacing:3px">••••••••</span>
-          </div>
-          <div style="position:absolute;right:10px;top:50%;transform:translateY(-50%);display:flex;gap:6px">
-            <button onclick="toggleSecPassword()" id="sec-pass-eye" style="width:32px;height:32px;border-radius:8px;background:var(--hover);color:var(--text-secondary);font-size:13px;border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center">
-              <i class="fas fa-eye"></i>
-            </button>
-            <button onclick="copySecInfo('pass')" style="width:32px;height:32px;border-radius:8px;background:var(--primary-light);color:var(--primary);font-size:13px;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center">
-              <i class="fas fa-copy"></i>
-            </button>
-          </div>
-        </div>
-        <div id="sec-pass-note" style="font-size:11px;color:var(--text-secondary);margin-top:6px;padding-left:4px;display:none">
-          ⚠️ পাসওয়ার্ড দেখা শেষে চোখ আইকনে ক্লিক করে লুকিয়ে রাখুন।
-        </div>
-      </div>
-
-      <!-- Login info -->
-      <div style="background:var(--primary-light);border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px">
-        <i class="fas fa-circle-info" style="color:var(--primary);font-size:16px"></i>
-        <div style="font-size:12px;color:var(--primary);font-weight:600;line-height:1.5">একাউন্টে লগইন করতে এই Gmail ও পাসওয়ার্ড ব্যবহার করুন।</div>
-      </div>
-
-    </div>
-  </div>
-</div>
 </body>
 </html>
